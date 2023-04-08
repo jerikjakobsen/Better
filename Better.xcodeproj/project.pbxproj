@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5276138229B558B100BF2A37 /* WeightCombinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276138129B558B100BF2A37 /* WeightCombinationViewController.swift */; };
 		5280F27E29DFA57200C3D0E0 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5280F27D29DFA57200C3D0E0 /* Routine.swift */; };
+		5280F28129E1C95100C3D0E0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5280F28029E1C95100C3D0E0 /* NetworkService.swift */; };
 		528605612994A82E00293F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528605602994A82E00293F77 /* AppDelegate.swift */; };
 		528605632994A82E00293F77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528605622994A82E00293F77 /* SceneDelegate.swift */; };
 		528605652994A82E00293F77 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528605642994A82E00293F77 /* WeightViewController.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		5276138129B558B100BF2A37 /* WeightCombinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCombinationViewController.swift; sourceTree = "<group>"; };
 		5280F27D29DFA57200C3D0E0 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
+		5280F28029E1C95100C3D0E0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		5286055D2994A82E00293F77 /* Better.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Better.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528605602994A82E00293F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		528605622994A82E00293F77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5280F27F29E1C93B00C3D0E0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5280F28029E1C95100C3D0E0 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		528605542994A82E00293F77 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +124,7 @@
 		5286055F2994A82E00293F77 /* Better */ = {
 			isa = PBXGroup;
 			children = (
+				5280F27F29E1C93B00C3D0E0 /* Network */,
 				52F5933D2996EBCA00811247 /* Cells */,
 				52F593352996E36F00811247 /* Enums */,
 				52F593342996E36600811247 /* Models */,
@@ -313,6 +324,7 @@
 				52F5935B299A0C6000811247 /* AddExerciseView.swift in Sources */,
 				52F593492999AF1600811247 /* ExerciseRecordCell.swift in Sources */,
 				529C518B29A0C1D300883BE9 /* EditableWeightSectionView.swift in Sources */,
+				5280F28129E1C95100C3D0E0 /* NetworkService.swift in Sources */,
 				52F593472999561600811247 /* ExerciseRecord.swift in Sources */,
 				52F5934D2999CB5F00811247 /* ExerciseEditableCell.swift in Sources */,
 			);

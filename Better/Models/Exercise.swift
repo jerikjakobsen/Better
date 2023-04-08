@@ -106,7 +106,7 @@ class Exercise {
         ]
     }
     
-    func isEqual(e: Exercise) {
+    func isEqual(e: Exercise) -> Bool {
         return e.name == self.name && e.type == self.type && e.reps == self.reps && e.weight == self.weight && e.link == self.link && e.description == self.description
     }
     
