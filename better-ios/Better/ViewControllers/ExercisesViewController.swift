@@ -14,16 +14,11 @@ class ExercisesViewController: UIViewController, AddExerciseViewControllerDelega
     }
     
     func addExercise(exercise: Exercise) {
-        guard let newDay = exercise.day else {return}
-        if newDay >= self._exercises!.count {
-            self._exercises?.append([exercise])
-        } else {
-            self._exercises![newDay].append(exercise)
-        }
+        self._exercises?.append(exercise)
         self.exercisesView?._tableview.reloadData()
     }
     
-    var _exercises: [[Exercise]]?
+    var _exercises: [Exercise]?
     var exercisesView: ExercisesView?
     
     required init?(coder: NSCoder) {
@@ -79,41 +74,33 @@ class ExercisesViewController: UIViewController, AddExerciseViewControllerDelega
 extension ExercisesViewController: ExercisesViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return _exercises?[section].count ?? 0
+        return _exercises?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ExerciseCell") as! ExerciseCell
-        cell.setCellInfo(exercise: _exercises![indexPath.section][indexPath.row])
+        cell.setCellInfo(exercise: _exercises![indexPath.row])
         return cell
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return _exercises?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Day \(section+1)"
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if self._exercises == nil {
             return
         }
-        let ex = self._exercises![indexPath.section][indexPath.row]
+        let ex = self._exercises![indexPath.row]
         let exerciseDetailVC = ExerciseDetailViewController(exercise: ex)
         exerciseDetailVC.delegate = self
         self.navigationController?.pushViewController(exerciseDetailVC, animated: true)
     }
-    
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
-
-        var contentConfiguration: UIListContentConfiguration = header.defaultContentConfiguration()
-        
-        contentConfiguration.textProperties.font = FontConstants.LabelTitle1
-        contentConfiguration.text = "Day \(section+1)"
-        
-        header.contentConfiguration = contentConfiguration
-    }
+//
+//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+//
+//        var contentConfiguration: UIListContentConfiguration = header.defaultContentConfiguration()
+//
+//        contentConfiguration.textProperties.font = FontConstants.LabelTitle1
+//        contentConfiguration.text = "Day \(section+1)"
+//
+//        header.contentConfiguration = contentConfiguration
+//    }
 }

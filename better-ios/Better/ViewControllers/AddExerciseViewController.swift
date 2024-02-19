@@ -25,7 +25,7 @@ class AddExerciseViewController: UIViewController, AddExerciseViewDelegate, Musc
     }
     
     @objc func addExercise() {
-        let exercise = Exercise(name: _view.nameString, type: _selectedGroups, weight: _view.weightFloat, reps: _view.repsString, day: _selectedDay, link: _view.linkString)
+        let exercise = Exercise(name: _view.nameString, type: _selectedGroups, weight: _view.weightFloat, reps: _view.repsString, link: _view.linkString, description: "")
         Task {
             await exercise.saveToFirebase { err, docID in
                 if err != nil {
@@ -48,36 +48,36 @@ class AddExerciseViewController: UIViewController, AddExerciseViewDelegate, Musc
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return _maxDay + 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        _selectedDay = row
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if (row >= _maxDay) {
-            return "Add New Day"
-        } else {
-            return String(row + 1)
-        }
-    }
+//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        return 1
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return _maxDay + 1
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        _selectedDay = row
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        if (row >= _maxDay) {
+//            return "Add New Day"
+//        } else {
+//            return String(row + 1)
+//        }
+//    }
     
     var delegate: AddExerciseViewControllerDelegate?
     let _view: AddExerciseView!
-    let _maxDay: Int!
+//    let _maxDay: Int!
     var _selectedGroups: [String]!
-    var _selectedDay: Int!
+//    var _selectedDay: Int!
     init(maxDay: Int) {
         _view = AddExerciseView()
-        _maxDay = maxDay
+//        _maxDay = maxDay
         _selectedGroups = []
-        _selectedDay = 0
+//        _selectedDay = 0
         super.init(nibName: nil, bundle: nil)
         overrideUserInterfaceStyle = .light
         view.backgroundColor = .systemBackground

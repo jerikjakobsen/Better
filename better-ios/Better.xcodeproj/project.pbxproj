@@ -10,6 +10,9 @@
 		5276138229B558B100BF2A37 /* WeightCombinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276138129B558B100BF2A37 /* WeightCombinationViewController.swift */; };
 		5280F27E29DFA57200C3D0E0 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5280F27D29DFA57200C3D0E0 /* Routine.swift */; };
 		5280F28129E1C95100C3D0E0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5280F28029E1C95100C3D0E0 /* NetworkService.swift */; };
+		5280F28529E29F0C00C3D0E0 /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5280F28429E29F0C00C3D0E0 /* RoutineViewController.swift */; };
+		5280F28729E2B31C00C3D0E0 /* RoutineCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5280F28629E2B31C00C3D0E0 /* RoutineCreationView.swift */; };
+		5280F28929E31D0700C3D0E0 /* RoutineCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5280F28829E31D0700C3D0E0 /* RoutineCreationViewController.swift */; };
 		528605612994A82E00293F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528605602994A82E00293F77 /* AppDelegate.swift */; };
 		528605632994A82E00293F77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528605622994A82E00293F77 /* SceneDelegate.swift */; };
 		528605652994A82E00293F77 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528605642994A82E00293F77 /* WeightViewController.swift */; };
@@ -49,6 +52,9 @@
 		5276138129B558B100BF2A37 /* WeightCombinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCombinationViewController.swift; sourceTree = "<group>"; };
 		5280F27D29DFA57200C3D0E0 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		5280F28029E1C95100C3D0E0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5280F28429E29F0C00C3D0E0 /* RoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
+		5280F28629E2B31C00C3D0E0 /* RoutineCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCreationView.swift; sourceTree = "<group>"; };
+		5280F28829E31D0700C3D0E0 /* RoutineCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCreationViewController.swift; sourceTree = "<group>"; };
 		5286055D2994A82E00293F77 /* Better.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Better.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528605602994A82E00293F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		528605622994A82E00293F77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +176,7 @@
 				52F5935A299A0C6000811247 /* AddExerciseView.swift */,
 				52EBD5B1299FFBA000DE7CE3 /* MuscleGroupSelectorView.swift */,
 				52F707D929DA8C5000C7187E /* RoutineView.swift */,
+				5280F28629E2B31C00C3D0E0 /* RoutineCreationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +199,8 @@
 				52F5935C299A11BA00811247 /* AddExerciseViewController.swift */,
 				52EBD5B3299FFDF700DE7CE3 /* MuscleGroupSelectorViewController.swift */,
 				5276138129B558B100BF2A37 /* WeightCombinationViewController.swift */,
+				5280F28429E29F0C00C3D0E0 /* RoutineViewController.swift */,
+				5280F28829E31D0700C3D0E0 /* RoutineCreationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -317,11 +326,14 @@
 				5276138229B558B100BF2A37 /* WeightCombinationViewController.swift in Sources */,
 				52F5934B2999B44200811247 /* ExerciseDetailViewController.swift in Sources */,
 				52F707DA29DA8C5000C7187E /* RoutineView.swift in Sources */,
+				5280F28529E29F0C00C3D0E0 /* RoutineViewController.swift in Sources */,
 				52EBD5B2299FFBA000DE7CE3 /* MuscleGroupSelectorView.swift in Sources */,
 				529C518729A0BBB800883BE9 /* FontConstants.swift in Sources */,
 				52F593312996DC5600811247 /* Exercise.swift in Sources */,
 				5280F27E29DFA57200C3D0E0 /* Routine.swift in Sources */,
+				5280F28929E31D0700C3D0E0 /* RoutineCreationViewController.swift in Sources */,
 				52F5935B299A0C6000811247 /* AddExerciseView.swift in Sources */,
+				5280F28729E2B31C00C3D0E0 /* RoutineCreationView.swift in Sources */,
 				52F593492999AF1600811247 /* ExerciseRecordCell.swift in Sources */,
 				529C518B29A0C1D300883BE9 /* EditableWeightSectionView.swift in Sources */,
 				5280F28129E1C95100C3D0E0 /* NetworkService.swift in Sources */,

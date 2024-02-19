@@ -8,8 +8,10 @@
 import Foundation
 import UIKit
 
-protocol RoutineViewProtocol {
-    func changeRoutine(Routine) -> Void
+protocol RoutineViewDelegate {
+    func didTapChangeRoutine() -> Void
+    func didTapCreateRoutine() -> Void
+    func didTapUpdateRoutine() -> Void
 }
 
 class RoutineView: UIView {
@@ -18,9 +20,10 @@ class RoutineView: UIView {
     let currentRoutineTitleLabel: UILabel = UILabel()
     let changeRoutineButton: UIButton = UIButton()
     let createRoutineButton: UIButton = UIButton()
+    let updateRoutineButton: UIButton = UIButton()
     let stackView: UIStackView = UIStackView()
     let spacerView: UIView = UIView()
-    let delegate: RoutineViewProtocol?
+    var delegate: RoutineViewDelegate?
     
     override init(frame: CGRect) {
         
@@ -28,6 +31,10 @@ class RoutineView: UIView {
         currentRoutineLabel.numberOfLines = 0
         
         currentRoutineTitleLabel.numberOfLines = 0
+        
+        changeRoutineButton.setTitle("Change Routine", for: .normal)
+        createRoutineButton.setTitle("Create Routine", for: .normal)
+        updateRoutineButton.setTitle("Update Routine", for: .normal)
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         spacerView.translatesAutoresizingMaskIntoConstraints = false
@@ -37,10 +44,15 @@ class RoutineView: UIView {
         stackView.addArrangedSubview(currentRoutineTitleLabel)
         stackView.addArrangedSubview(changeRoutineButton)
         stackView.addArrangedSubview(createRoutineButton)
+        stackView.addArrangedSubview(updateRoutineButton)
         stackView.axis = .vertical
         stackView.alignment = .center
         
         super.init(frame: frame)
+        
+        changeRoutineButton.addTarget(self, action: #selector(didTapChangeRoutineButton), for: .touchUpInside)
+        createRoutineButton.addTarget(self, action: #selector(didTapCreateRoutineButton), for: .touchUpInside)
+        updateRoutineButton.addTarget(self, action: #selector(didTapUpdateRoutineButton), for: .touchUpInside)
         
         self.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(stackView)
@@ -54,12 +66,24 @@ class RoutineView: UIView {
         ])
         
     }
+    @objc
+    func didTapChangeRoutineButton() {
+        delegate?.didTapChangeRoutine()
+    }
+    
+    @objc
+    func didTapCreateRoutineButton() {
+        delegate?.didTapCreateRoutine()
+    }
+    
+    @objc
+    func didTapUpdateRoutineButton() {
+        delegate?.didTapUpdateRoutine()
+    }
     
     func setTitle(title: String) {
         currentRoutineTitleLabel.text = title
     }
-    
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

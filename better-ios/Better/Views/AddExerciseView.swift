@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import NotificationCenter
 
-protocol AddExerciseViewDelegate: UIPickerViewDataSource, UIPickerViewDelegate {
+protocol AddExerciseViewDelegate {
     func didSelectMuscleGroupSelector() -> Void
 }
 
@@ -44,7 +44,6 @@ class AddExerciseView: UIView, UIPickerViewDataSource, UIPickerViewDelegate, UIS
     var linkString: String {
         return _linkTextField.text ?? ""
     }
-    let _dayPickerView: UIPickerView!
     let _scrollView: UIScrollView!
     let _wrapperView: UIView!
     var _delegate: AddExerciseViewDelegate?
@@ -54,8 +53,6 @@ class AddExerciseView: UIView, UIPickerViewDataSource, UIPickerViewDelegate, UIS
         }
         set (newVal) {
             _delegate = newVal
-            _dayPickerView.dataSource = newVal
-            _dayPickerView.delegate = newVal
         }
     }
     
@@ -106,9 +103,6 @@ class AddExerciseView: UIView, UIPickerViewDataSource, UIPickerViewDelegate, UIS
         _linkTextField.backgroundColor = .secondarySystemBackground
         _linkTextField.placeholder = "Link"
         
-        _dayPickerView = UIPickerView()
-        _dayPickerView.translatesAutoresizingMaskIntoConstraints = false
-        
         super.init(frame: CGRect())
         self.translatesAutoresizingMaskIntoConstraints = false
         _wrapperView.addSubview(_nameTextField)
@@ -117,7 +111,6 @@ class AddExerciseView: UIView, UIPickerViewDataSource, UIPickerViewDelegate, UIS
         _wrapperView.addSubview(_weightTextField)
         _wrapperView.addSubview(_repsTextField)
         _wrapperView.addSubview(_linkTextField)
-        _wrapperView.addSubview(_dayPickerView)
         _scrollView.addSubview(_wrapperView)
         self.addSubview(_scrollView)
         _autolayoutSubviews()
@@ -186,9 +179,6 @@ class AddExerciseView: UIView, UIPickerViewDataSource, UIPickerViewDelegate, UIS
             _repsTextField.widthAnchor.constraint(equalTo: _wrapperView.widthAnchor, multiplier: 0.4),
             _repsTextField.centerXAnchor.constraint(equalTo: _wrapperView.centerXAnchor),
             
-            _dayPickerView.widthAnchor.constraint(equalTo: _wrapperView.widthAnchor, multiplier: 0.8),
-            _dayPickerView.centerXAnchor.constraint(equalTo: _wrapperView.centerXAnchor),
-            
             _linkTextField.widthAnchor.constraint(equalTo: _wrapperView.widthAnchor, multiplier: 0.6),
             _linkTextField.centerXAnchor.constraint(equalTo: _wrapperView.centerXAnchor),
         ]
@@ -210,10 +200,7 @@ class AddExerciseView: UIView, UIPickerViewDataSource, UIPickerViewDelegate, UIS
             
             _groupPickerLabel.topAnchor.constraint(equalTo: _muscleGroupLabel.bottomAnchor, constant: 20),
 
-            _dayPickerView.topAnchor.constraint(equalTo: _groupPickerLabel.bottomAnchor, constant: 20),
-            _dayPickerView.heightAnchor.constraint(equalToConstant: 120),
-
-            _linkTextField.topAnchor.constraint(equalTo: _dayPickerView.bottomAnchor, constant: 20),
+            _linkTextField.topAnchor.constraint(equalTo: _muscleGroupLabel.bottomAnchor, constant: 20),
             _linkTextField.bottomAnchor.constraint(equalTo: _wrapperView.bottomAnchor, constant: -50),
 
         ]

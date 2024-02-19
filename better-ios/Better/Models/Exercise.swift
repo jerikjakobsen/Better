@@ -68,28 +68,22 @@ class Exercise {
     
     
     
-//    static func getAllExercisesFromFirebase(callback: @escaping (_ exercises: [[Exercise]]?, _ err: Error?) -> Void) async {
-//        FirestoreDatabase.shared.database.collection("Exercise").order(by: "day").getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                    callback(nil, err)
-//                } else {
-//                    var exercisesArr: [[Exercise]] = []
-//                    var ind = -1
-//
-//                    for document in querySnapshot!.documents {
-//                        var data = document.data()
-//                        data["id"] = document.documentID
-//                        if document.data()["day"] as! Int > ind {
-//                            exercisesArr.append([Exercise(dict: data)])
-//                            ind += 1
-//                        } else {
-//                            exercisesArr[exercisesArr.count-1].append(Exercise(dict: data))
-//                        }
-//                    }
-//                    callback(exercisesArr, err)
-//                }
-//        }
-//    }
+    static func getAllExercisesFromFirebase(callback: @escaping (_ exercises: [Exercise]?, _ err: Error?) -> Void) async {
+        FirestoreDatabase.shared.database.collection("Exercise").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                    callback(nil, err)
+                } else {
+                    var exercisesArr: [Exercise] = []
+
+                    for document in querySnapshot!.documents {
+                        var data = document.data()
+                        data["id"] = document.documentID
+                        exercisesArr.append(Exercise(dict: data))
+                    }
+                    callback(exercisesArr, err)
+                }
+        }
+    }
     
     func toDict() -> [String: Any] {
         var muscleGroups: [String] = []
