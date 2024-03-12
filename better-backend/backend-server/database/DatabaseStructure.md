@@ -1,5 +1,7 @@
 # Database Structure
 
+THIS IS OUT OF DATE, PLEASE REFER TO THE INIT SQL FILE
+
 ## Routine
 
 * id: String
@@ -23,7 +25,7 @@
 
 ## RoutineExercise
 
-* day: Int
+* day: String 
 * exercise_id: String
 * routine_id: String
 
