@@ -1,12 +1,22 @@
+DROP TABLE IF EXISTS routine;
+DROP TABLE IF EXISTS exercise;
+DROP TABLE IF EXISTS day;
+DROP TABLE IF EXISTS routine_exercise;
+DROP TABLE IF EXISTS muscle_group;
+DROP TABLE IF EXISTS exercise_muscle_group;
+DROP TABLE IF EXISTS exercise_session;
+DROP TABLE IF EXISTS set_session;
+DROP TABLE IF EXISTS day_session;
+
 CREATE TABLE IF NOT EXISTS routine (
-    id UUID PRIMARY KEY NOT NULL,
+    id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
     name VARCHAR(256) NOT NULL,
     current_routine_number INTEGER NOT NULL DEFAULT 1,
     created TIMESTAMPTZ NOT NULL DEFAULT current_timestamp
     );
 
 CREATE TABLE IF NOT EXISTS exercise (
-    id UUID PRIMARY KEY NOT NULL,
+    id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
     name VARCHAR(256) NOT NULL, 
     link VARCHAR(512) DEFAULT '',
     description VARCHAR(2560) DEFAULT '',
@@ -14,7 +24,7 @@ CREATE TABLE IF NOT EXISTS exercise (
     );
 
 CREATE TABLE IF NOT EXISTS day (
-    id UUID PRIMARY KEY NOT NULL,
+    id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),,
     routine_id UUID NOT NULL,
     day_order INTEGER NOT NULL,
     name VARCHAR(256) NOT NULL,
@@ -22,7 +32,7 @@ CREATE TABLE IF NOT EXISTS day (
     ); 
 
 CREATE TABLE IF NOT EXISTS routine_exercise (
-    id UUID PRIMARY KEY NOT NULL,
+    id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
     exercise_id UUID NOT NULL,
     routine_id UUID NOT NULL,
     day_id UUID NOT NULL, 
@@ -35,7 +45,7 @@ CREATE TABLE IF NOT EXISTS routine_exercise (
 
 CREATE TABLE IF NOT EXISTS muscle_group (
     name UUID NOT NULL UNIQUE,
-    id UUID PRIMARY KEY NOT NULL,
+    id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
     created TIMESTAMPTZ NOT NULL DEFAULT current_timestamp
     );
 
@@ -49,15 +59,17 @@ CREATE TABLE IF NOT EXISTS exercise_muscle_group (
     );
  
 CREATE TABLE IF NOT EXISTS exercise_session (
-    id UUID PRIMARY KEY NOT NULL,
+    id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
     routine_exercise_id UUID NOT NULL,
+    training_session_id UUID NOT NULL,
     start_time TIMESTAMPTZ NOT NULL DEFAULT current_timestamp,
     end_time TIMESTAMPTZ,
-    FOREIGN KEY (routine_exercise_id) REFERENCES routine_exercise(id)
+    FOREIGN KEY (routine_exercise_id) REFERENCES routine_exercise(id),
+    FOREIGN KEY (training_session_id) REFERENCES training_session(id)
     );
 
 CREATE TABLE IF NOT EXISTS set_session (
-    id UUID PRIMARY KEY NOT NULL,
+    id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
     exercise_session_id UUID NOT NULL,
     start_time TIMESTAMPTZ NOT NULL DEFAULT current_timestamp,
     end_time TIMESTAMPTZ,
@@ -67,7 +79,7 @@ CREATE TABLE IF NOT EXISTS set_session (
     );
 
 CREATE TABLE IF NOT EXISTS training_session (
-    id UUID PRIMARY KEY NOT NULL,
+    id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
     time_start TIMESTAMPTZ NOT NULL,
     time_end TIMESTAMPTZ,
     routine_id UUID NOT NULL,
@@ -76,5 +88,12 @@ CREATE TABLE IF NOT EXISTS training_session (
     created TIMESTAMPTZ NOT NULL DEFAULT current_timestamp,
     FOREIGN KEY (routine_id) REFERENCES routine(id),
     FOREIGN KEY (day_id) REFERENCES day(id)
+    );
+
+CREATE TABLE IF NOT EXISTS note (
+    id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
+    content VARCHAR(4096) NOT NULL,
+    exercise_session_id UUID NOT NULL,
+    FOREIGN KEY (exercise_session_id) REFERENCES exercise_session(id)
     );
 
