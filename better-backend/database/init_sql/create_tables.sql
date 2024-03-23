@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS routine_exercise (
     );
 
 CREATE TABLE IF NOT EXISTS muscle_group (
-    name UUID NOT NULL UNIQUE,
+    name VARCHAR(256) NOT NULL UNIQUE,
     id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
     created TIMESTAMPTZ NOT NULL DEFAULT current_timestamp
     );
@@ -88,8 +88,8 @@ CREATE TABLE IF NOT EXISTS exercise_session (
     id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
     routine_exercise_id UUID NOT NULL,
     training_session_id UUID NOT NULL,
-    start_time TIMESTAMPTZ NOT NULL DEFAULT current_timestamp,
-    end_time TIMESTAMPTZ,
+    time_start TIMESTAMPTZ NOT NULL DEFAULT current_timestamp,
+    time_end TIMESTAMPTZ,
     FOREIGN KEY (routine_exercise_id) REFERENCES routine_exercise(id),
     FOREIGN KEY (training_session_id) REFERENCES training_session(id)
     );
@@ -97,8 +97,8 @@ CREATE TABLE IF NOT EXISTS exercise_session (
 CREATE TABLE IF NOT EXISTS set_session (
     id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
     exercise_session_id UUID NOT NULL,
-    start_time TIMESTAMPTZ NOT NULL DEFAULT current_timestamp,
-    end_time TIMESTAMPTZ,
+    time_start TIMESTAMPTZ NOT NULL DEFAULT current_timestamp,
+    time_end TIMESTAMPTZ,
     number_of_reps INTEGER NOT NULL DEFAULT 0,
     weight INTEGER NOT NULL DEFAULT 0,
     FOREIGN KEY (exercise_session_id) REFERENCES exercise_session(id)
@@ -110,4 +110,16 @@ CREATE TABLE IF NOT EXISTS note (
     exercise_session_id UUID NOT NULL,
     FOREIGN KEY (exercise_session_id) REFERENCES exercise_session(id)
     );
+
+
+GRANT INSERT, UPDATE, SELECT, DELETE 
+ON ALL TABLES IN SCHEMA public
+TO better;
+
+
+
+
+
+
+
 
