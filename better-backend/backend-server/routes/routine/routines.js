@@ -1,4 +1,5 @@
-import {get_routine_info, get_training_sessions} from './queries/routines.js'
+import {get_routine_info, get_training_day_history} from './queries/routines.js'
+import {inspect} from 'util'
 
 const home = async (req, res) => {
     const {
@@ -58,58 +59,82 @@ const day_details = async (req, res) => {
     }
 
     try {
-        const dbRes = await get_training_sessions(routine_id, day_id)
+        const dbRes = await get_training_day_history(routine_id, day_id)
         let finalRes = {}
-        let training_sessions = {}
+        let exercises = {}
         let day_muscle_groups = new Set()
+        let exercise_session_per_training_session = {}
+        let day_is_completed = false
+        // exercise_id -> { exercise_session -> [set_sessions]}
         for (let session of dbRes.rows) {
-            if (training_sessions[session.training_session_id] == null) {
-                let newTrainingSession = {}
-                newTrainingSession.id = session.training_session_id
-                newTrainingSession.time_start = session.training_session_time_start
-                newTrainingSession.time_end = session.training_session_time_end
-                newTrainingSession.routine_id = routine_id
-                newTrainingSession.day_id = day_id
-                newTrainingSession.routine_number = session.routine_number
-                newTrainingSession.exercise_sessions =  {}
-                training_sessions[session.training_session_id] = newTrainingSession
+            session.muscle_groups.forEach(muscle_group => {
+                if (muscle_group) day_muscle_groups.add(muscle_group)
+                })
+            if (session.current_routine_number = session.routine_number) {
+                day_is_completed = true
             }
-            day_muscle_groups.add(session.muscle_group_name)
-            if (training_sessions[session.training_session_id].exercise_sessions[session.exercise_session_id] == null) {
+            if (session.training_session_id && exercise_session_per_training_session[session.training_session_id] == null) {
+               let newTrainingSession = {}
+               newTrainingSession.time_start = session.training_session_time_start
+               newTrainingSession.time_end = session.training_session_time_end  
+               newTrainingSession.exercise_sessions = {}
+               exercise_session_per_training_session[session.training_session_id] = newTrainingSession
+            }
+            if (session.exercise_session_id && exercise_session_per_training_session[session.training_session_id].exercise_sessions[session.exercise_session_id] == null) {
                 let newExerciseSession = {}
-                newExerciseSession.exercise_id = session.exercise_id
+                newExerciseSession.time_start = session.exercise_session_time_start
+                newExerciseSession.time_end = session.exercise_session_time_end 
+                exercise_session_per_training_session[session.training_session_id].exercise_sessions[session.exercise_session_id] = newExerciseSession
+            }
+            if (exercises[session.exercise_id] == null) {
+                let newExercise = {}
+                newExercise.name = session.exercise_name
+                newExercise.id = session.exercise_id
+                newExercise.sessions = {}
+                exercises[session.exercise_id] = newExercise
+            }
+            if (session.exercise_session_id == null) continue
+            if (exercises[session.exercise_id].sessions[session.exercise_session_id] == null) {
+                console.log(session.exercise_id, session.exercise_session_id)
+                let newExerciseSession = {}
+                newExerciseSession.id = session.exercise_session_id
                 newExerciseSession.time_start = session.exercise_session_time_start
                 newExerciseSession.time_end = session.exercise_session_time_end
-                newExerciseSession.muscle_groups = new Set([session.muscle_group_name])
-                training_sessions[session.training_session_id].exercise_sessions[session.exercise_session_id] = newExerciseSession
-            } else {
-                training_sessions[session.training_session_id].exercise_sessions[session.exercise_session_id].muscle_groups.add(session.muscle_group_name) 
-            }
+                newExerciseSession.routine_number = session.routine_number
+                newExerciseSession.sets = []
+                exercises[session.exercise_id].sessions[session.exercise_session_id] = newExerciseSession
+           } 
+           if (session.set_session_id == null) continue
+           let newSetSession = {}
+           newSetSession.id = session.set_session_id
+           newSetSession.time_start = session.set_session_time_start
+           newSetSession.time_end = session.set_session_time_end
+           newSetSession.weight = session.weight
+           newSetSession.num_reps = session.number_of_reps
+           exercises[session.exercise_id].sessions[session.exercise_session_id].sets.push(newSetSession)
         }
-        training_sessions = Object.values(training_sessions).sort((a,b) => b.routine_number - a.routine_number)
-        for (let sess of training_sessions) {
-          sess.exercise_sessions = Object.values(sess.exercise_sessions) 
-          for (let ex_sess of sess.exercise_sessions) {
-              ex_sess.muscle_groups = Array.from(ex_sess.muscle_groups)
-          }
-        }
+        exercises = Object.values(exercises)
+        exercises.forEach(exercise => {
+            exercise.sessions = Object.values(exercise.sessions).sort((a,b) => b.time_start - a.time_start)
+        })
         let total_training_time = 0
-        let total_time_between_exercises = 0
-        let total_exercises_done = 0 
-        for (let session of training_sessions) {
-            total_training_time += session.time_end - session.time_start
-            total_exercises_done += session.exercise_sessions.length
-            for (let i = 1; i < session.exercise_sessions.length; i ++) {
-                total_time_between_exercises += session.exercise_sessions[i].time_start - session.exercise_sessions[i-1].time_end
+        let total_break_time = 0
+        let exercise_break_count = 0
+        let training_sessions_list = Object.values(exercise_session_per_training_session)
+        for (let training_sess of training_sessions_list) {
+            total_training_time += training_sess.time_end - training_sess.time_start
+            let sortedSessions = Object.values(training_sess.exercise_sessions).sort((a,b) => a.time_start - b.time_start)
+            for (let i = 1; i < training_sess.length; i++) {
+                total_break_time += sortedSessions[i].time_start - sortedSessions[i-1].time_end
+                exercise_break_count ++
             }
         }
+        finalRes.average_time_to_complete = training_sessions_list.length == 0 ? 0 : total_training_time/training_sessions_list.length
+        finalRes.average_break_time = exercise_break_count == 0 ? 0 : total_break_time/exercise_break_count
+        finalRes.day_is_completed = day_is_completed
         finalRes.day_muscle_groups = Array.from(day_muscle_groups)
-        finalRes.average_training_time = total_training_time/training_sessions.length
-        finalRes.average_exercise_session_break = total_exercises_done > 1 ? total_time_between_exercises/(total_exercises_done-1) : 0
-        finalRes.training_sessions = training_sessions
-        
-        return res.status(200).json(finalRes)
-
+        finalRes.exercises = exercises
+        return res.status(200).json(finalRes) 
     } catch (err) {
         console.error(err)
         return res.status(500).json({message: "Something went wrong!"})
