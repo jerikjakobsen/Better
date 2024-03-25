@@ -9,7 +9,7 @@ VALUES ('f2ac4d6c-dc6b-42a2-a373-dc566ec2b44a', 'ngan@gmail.com', ' sadasdahudiu
 -- Create Routine
 
 INSERT INTO routine (id, name, current_routine_number, creator_user_id)
-VALUES ('c2e8dbbf-72c8-4464-bf7e-5259d2efc77e', 'Routine 1', 1, 'a8ce98b8-c0a9-4b5a-a605-377e159c320a');
+VALUES ('c2e8dbbf-72c8-4464-bf7e-5259d2efc77e', 'Routine 1', 2, 'a8ce98b8-c0a9-4b5a-a605-377e159c320a');
 
 INSERT INTO routine (id, name, current_routine_number, creator_user_id)
 VALUES ('c2e8dbbf-72d8-4464-bf9e-5259d2bfc77e', 'Ngans Routine', 1, 'f2ac4d6c-dc6b-42a2-a373-dc566ec2b44a');
@@ -102,10 +102,10 @@ VALUES ('ad01cd5e-910f-4c76-ab5b-92bc227bae53', 'c2e8dbbf-72c8-4464-bf7e-5259d2e
 
 -- User 2 Days
 INSERT INTO day (id, routine_id, day_order, name)
-VALUES ('7052d78b-d34f-499c-8311-feb1b0e0a416', 'c2e8dbbf-72c8-4464-bf7e-5259d2efc77e', 1, 'Arms and Legs');
+VALUES ('7052d78b-d34f-499c-8311-feb1b0e0a416', 'c2e8dbbf-72d8-4464-bf9e-5259d2bfc77e', 1, 'Arms and Legs');
 
 INSERT INTO day (id, routine_id, day_order, name)
-VALUES ('17873c68-bc26-4010-bd85-9b28a3aeaddc', 'c2e8dbbf-72c8-4464-bf7e-5259d2efc77e', 2, 'Chest and Abs');
+VALUES ('17873c68-bc26-4010-bd85-9b28a3aeaddc', 'c2e8dbbf-72d8-4464-bf9e-5259d2bfc77e', 2, 'Chest and Abs');
 
 -- Create routine_exercise (The pairing between routine, exercise and day)
 -- User 1 pairings
@@ -149,7 +149,10 @@ VALUES ('80f0fd2e-b1f1-4e43-bc82-04a02618ee44', '36afe0bc-8288-44cd-b372-c39f126
 -- Create training_session
 
 INSERT INTO training_session (id, time_start, time_end, routine_id, day_id, routine_number)
-VALUES ('4052d78b-d34f-499c-8311-feb1b0e0a416', current_timestamp, current_timestamp + (45.6 * interval '1 minute'), 'c2e8dbbf-72c8-4464-bf7e-5259d2efc77e','4052d78b-d34f-499c-8311-feb1b0e0a416', 1);
+VALUES ('4052d78b-d34f-499c-8311-feb1b0e0a416', current_timestamp, current_timestamp + (45.6 * interval '1 minute'), 'c2e8dbbf-72c8-4464-bf7e-5259d2efc77e','4052d78b-d34f-499c-8311-feb1b0e0a416', 2);
+
+INSERT INTO training_session (id, time_start, time_end, routine_id, day_id, routine_number)
+VALUES ('4052d78d-d34f-499c-8311-feb1b0e0a416', current_timestamp, current_timestamp + (45.6 * interval '1 minute'), 'c2e8dbbf-72c8-4464-bf7e-5259d2efc77e','4052d78b-d34f-499c-8311-feb1b0e0a416', 1);
 
 -- Create exercise_session
 
@@ -158,6 +161,17 @@ VALUES ('d730209b-a944-46f3-88c4-c622b02e2b8b', '9bbf396e-73f2-4373-9924-0b9e04f
 
 INSERT INTO exercise_session (id, routine_exercise_id, training_session_id, time_start, time_end)
 VALUES ('eac8502f-e304-41f6-8cb0-d083095f951c', 'cd04c208-c1bb-4a98-83c8-fcfd4e24cbe5', '4052d78b-d34f-499c-8311-feb1b0e0a416', current_timestamp + (5.2 * interval '1 minute'), current_timestamp + (9.8 * interval '1 minute'));
+
+
+
+INSERT INTO exercise_session (id, routine_exercise_id, training_session_id, time_start, time_end)
+VALUES ('a730209b-a944-46f3-88c4-c622b02e2b8b', '9bbf396e-73f2-4373-9924-0b9e04f82962', '4052d78d-d34f-499c-8311-feb1b0e0a416', current_timestamp + (0.3 * interval '1 minute'), current_timestamp + (4.7 * interval '1 minute'));
+
+INSERT INTO exercise_session (id, routine_exercise_id, training_session_id, time_start, time_end)
+VALUES ('b730209b-a944-46f3-88c4-c622b02e2b8b', 'cd04c208-c1bb-4a98-83c8-fcfd4e24cbe5', '4052d78d-d34f-499c-8311-feb1b0e0a416', current_timestamp + (0.3 * interval '1 minute'), current_timestamp + (4.7 * interval '1 minute'));
+
+INSERT INTO exercise_session (id, routine_exercise_id, training_session_id, time_start, time_end)
+VALUES ('c730209b-a944-46f3-88c4-c622b02e2b8b', '435500bd-2439-4b86-863e-b8fc8e355a91', '4052d78d-d34f-499c-8311-feb1b0e0a416', current_timestamp + (0.3 * interval '1 minute'), current_timestamp + (4.7 * interval '1 minute'));
 
 -- Create set_session
 
@@ -173,6 +187,12 @@ VALUES ('421c155f-8e8a-40b6-a502-d32850e2494d', 'eac8502f-e304-41f6-8cb0-d083095
 INSERT INTO set_session (id, exercise_session_id, time_start, time_end, number_of_reps, weight)
 VALUES ('1b527f71-fb37-4897-827d-9241cce126ac', 'eac8502f-e304-41f6-8cb0-d083095f951c', current_timestamp + (7.2 * interval '1 minute'), current_timestamp + (9.8 * interval '1 minute'), 8, 12);
 
+
+INSERT INTO set_session (id, exercise_session_id, time_start, time_end, number_of_reps, weight)
+VALUES ('669424c5-5b2e-4655-a641-3359bbf198ab', 'c730209b-a944-46f3-88c4-c622b02e2b8b', current_timestamp + (0.3 * interval '1 minute'), current_timestamp + (2 * interval '1 minute'), 12, 20);
+
+INSERT INTO set_session (id, exercise_session_id, time_start, time_end, number_of_reps, weight)
+VALUES ('769424c5-5b2e-4655-a641-3359bbf198ab', 'c730209b-a944-46f3-88c4-c622b02e2b8b', current_timestamp + (2.3 * interval '1 minute'), current_timestamp + (4.8 * interval '1 minute'), 10, 18);
 
 
 
