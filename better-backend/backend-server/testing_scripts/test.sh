@@ -12,3 +12,9 @@ curl -X GET \
      "http://localhost:4000/routine/day_details" 
 
 
+: 'curl -X GET \
+     -H "Content-type: application/json" \
+     -H "Accept: application/json" \
+     -d '{"user_id": "a8ce98b8-c0a9-4b5a-a605-377e159c320a"}' \
+     "http://localhost:4000/home/details/"
+'

@@ -95,7 +95,6 @@ const day_details = async (req, res) => {
             }
             if (session.exercise_session_id == null) continue
             if (exercises[session.exercise_id].sessions[session.exercise_session_id] == null) {
-                console.log(session.exercise_id, session.exercise_session_id)
                 let newExerciseSession = {}
                 newExerciseSession.id = session.exercise_session_id
                 newExerciseSession.time_start = session.exercise_session_time_start
@@ -122,10 +121,10 @@ const day_details = async (req, res) => {
         let exercise_break_count = 0
         let training_sessions_list = Object.values(exercise_session_per_training_session)
         for (let training_sess of training_sessions_list) {
-            total_training_time += training_sess.time_end - training_sess.time_start
+            total_training_time += training_sess.time_start - training_sess.time_end
             let sortedSessions = Object.values(training_sess.exercise_sessions).sort((a,b) => a.time_start - b.time_start)
-            for (let i = 1; i < training_sess.length; i++) {
-                total_break_time += sortedSessions[i].time_start - sortedSessions[i-1].time_end
+            for (let i = 1; i < sortedSessions.length; i++) {
+                total_break_time += sortedSessions[i].time_start - sortedSessions[i-1].time_end 
                 exercise_break_count ++
             }
         }

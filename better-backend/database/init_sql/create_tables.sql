@@ -17,10 +17,17 @@ CREATE TABLE IF NOT EXISTS users (
     salt VARCHAR(256) NOT NULL
     );
 
+CREATE TABLE IF NOT EXISTS weight (
+    id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_UUID(),
+    weight_number FLOAT NOT NULL,
+    created TIMESTAMPTZ NOT NULL DEFAULT current_timestamp
+    );
+
 CREATE TABLE IF NOT EXISTS routine (
     id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
     name VARCHAR(256) NOT NULL,
     current_routine_number INTEGER NOT NULL DEFAULT 1,
+    break_days INTEGER NOT NULL DEFAULT 1, -- The number of days before you break a streak / number of rest days
     creator_user_id UUID NOT NULL,
     created TIMESTAMPTZ NOT NULL DEFAULT current_timestamp,
     FOREIGN KEY (creator_user_id) REFERENCES users(id)
@@ -30,6 +37,7 @@ CREATE TABLE IF NOT EXISTS exercise (
     id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
     name VARCHAR(256) NOT NULL, 
     link VARCHAR(512) DEFAULT '',
+    default_break_time INTERVAL, -- The default time break between sets
     description VARCHAR(2560) DEFAULT '',
     created TIMESTAMPTZ NOT NULL DEFAULT current_timestamp,
     creator_user_id UUID DEFAULT NULL,
@@ -50,7 +58,7 @@ CREATE TABLE IF NOT EXISTS routine_exercise (
     exercise_id UUID NOT NULL,
     routine_id UUID NOT NULL,
     day_id UUID NOT NULL, 
-    break_time INTEGER NOT NULL DEFAULT 0,
+    break_time INTEGER NOT NULL DEFAULT 0, -- The time break the user designates for this specific exercise in this specific routine/day
     created TIMESTAMPTZ NOT NULL DEFAULT current_timestamp,
     FOREIGN KEY (exercise_id) REFERENCES exercise(id),
     FOREIGN KEY (routine_id) REFERENCES routine(id),
@@ -79,6 +87,8 @@ CREATE TABLE IF NOT EXISTS training_session (
     routine_id UUID NOT NULL,
     day_id UUID NOT NULL,
     routine_number INTEGER NOT NULL,
+    current_streak INTEGER NOT NULL DEFAULT 1,
+    is_end_of_streak BOOLEAN NOT NULL DEFAULT false,
     created TIMESTAMPTZ NOT NULL DEFAULT current_timestamp,
     FOREIGN KEY (routine_id) REFERENCES routine(id),
     FOREIGN KEY (day_id) REFERENCES day(id)
