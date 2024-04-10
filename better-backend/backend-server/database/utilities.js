@@ -7,6 +7,14 @@ const formatColumnValues = (values) => {
     return format(values.map(formatValue).join(", "), ...values)
 }
 
+const formatColumnUpdateValues = (updatedValues) => {
+    let setValues = []
+    for (const [key, value] of Object.entries(updatedValues)) {
+        setValues.push(format(`%I = %L`, key, value))
+    }
+    return setValues.join(", ")
+}
+
 const createInsertQuery = (table, insertValues) => {
     let keys, values;
     keys = []
@@ -24,6 +32,26 @@ const createInsertQuery = (table, insertValues) => {
     `
 }
 
+const createUpdateQuery = (table, updateValues, id) => {
+
+    let keys, values;
+    keys = []
+    values = []
+    console.log(updateValues)
+    for (const [key, value] of Object.entries(updateValues)) {
+        keys.push(key)
+        values.push(value)
+    }
+    const columnNames = keys.join(", ")
+    const columnValues = formatColumnValues(values)
+
+    return format(`
+    UPDATE ${table} 
+    SET ${formatColumnUpdateValues(updateValues)}
+    WHERE id = %L; 
+    `, id) 
+}
 export {
-    createInsertQuery
+    createInsertQuery,
+    createUpdateQuery
 }

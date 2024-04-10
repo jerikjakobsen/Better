@@ -1,8 +1,9 @@
 import express from 'express'
 const router = express.Router()
 
-import {createExercise} from './exerciseRoutes.js'
+import {createExercise, editExercise} from './exerciseRoutes.js'
 
 router.post('/create', createExercise)
+router.post('/edit', editExercise)  
 
 export default router
