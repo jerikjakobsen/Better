@@ -2,12 +2,7 @@ import format from "pg-format"
 
 const formatColumnValues = (values) => {
     const formatValue = (value) => {
-        switch (typeof value) {
-            case "string":
-                return `"%L"`
-            default:
-                return "%L"
-        }
+        return "%L"
     }
     return format(values.map(formatValue).join(", "), ...values)
 }
@@ -29,6 +24,6 @@ const createInsertQuery = (table, insertValues) => {
     `
 }
 
-module.exports = {
-   createInsertQuery 
+export {
+    createInsertQuery
 }
