@@ -17,10 +17,10 @@ struct RoutineHomeHeaderSectionViewModel {
 
 class RoutineHomeHeaderSectionView: UITableViewHeaderFooterView {
     
-    let _routineNumberLabel: UILabel!
-    let _routinesDoneLabel: UILabel!
-    let _availableRestDaysLabel: UILabel!
-    let _daysDoneLabel: UILabel!
+    let _routineNumberLabel: UILabel
+    let _routinesDoneLabel: UILabel
+    let _availableRestDaysLabel: UILabel
+    let _daysDoneLabel: UILabel
     
     override init(reuseIdentifier: String?) {
         _routineNumberLabel = UILabel()
@@ -30,16 +30,20 @@ class RoutineHomeHeaderSectionView: UITableViewHeaderFooterView {
         
         _routineNumberLabel.translatesAutoresizingMaskIntoConstraints = false
         _routineNumberLabel.font = Fonts.Montserrat_Large.bold()
+        _routineNumberLabel.textColor = Colors.blackTextColor
         
         _routinesDoneLabel.translatesAutoresizingMaskIntoConstraints = false
         _routinesDoneLabel.font = Fonts.Montserrat_Small_Medium
         _routinesDoneLabel.text = "Routines Done"
+        _routinesDoneLabel.textColor = Colors.blackTextColor
         
         _availableRestDaysLabel.translatesAutoresizingMaskIntoConstraints = false
         _availableRestDaysLabel.font = Fonts.Montserrat_Small_Medium
+        _availableRestDaysLabel.textColor = Colors.blackTextColor
         
         _daysDoneLabel.translatesAutoresizingMaskIntoConstraints = false
         _daysDoneLabel.font = Fonts.Montserrat_Small_Medium
+        _daysDoneLabel.textColor = Colors.blackTextColor
         
         super.init(reuseIdentifier: reuseIdentifier)
         

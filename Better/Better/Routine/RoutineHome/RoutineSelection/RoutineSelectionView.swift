@@ -34,6 +34,7 @@ class RoutineSelectionView: UIView {
         _titleLabel = UILabel()
         _titleLabel.translatesAutoresizingMaskIntoConstraints = false
         _titleLabel.font = Fonts.Montserrat_Medium
+        _titleLabel.textColor = Colors.blackTextColor
         
         _dropDownButton = UIButton()
         _dropDownButton.translatesAutoresizingMaskIntoConstraints = false

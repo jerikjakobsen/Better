@@ -17,6 +17,7 @@ class RoutineSelectionOptionCell: UITableViewCell {
         self.nameLabel.translatesAutoresizingMaskIntoConstraints = false
         self.nameLabel.font = Fonts.Montserrat_Small_Medium
         self.nameLabel.numberOfLines = 0
+        self.nameLabel.textColor = Colors.blackTextColor
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.contentView.addSubview(nameLabel)

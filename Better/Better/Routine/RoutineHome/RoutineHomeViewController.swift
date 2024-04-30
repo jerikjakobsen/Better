@@ -28,6 +28,7 @@ class RoutineHomeViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         self.selectedRoutine = routines[0]
         self.tabBarItem = .init(title: "", image: UIImage(named: "weightlifter"), selectedImage: UIImage(named: "weightlifter"))
+        
         self.view = self._routineHomeView
 
         self._routineHomeView.delegate = self
@@ -75,6 +76,14 @@ extension RoutineHomeViewController: RoutineHomeViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let day = self.days[indexPath.row]
+        if let r = self.selectedRoutine {
+            let vc = RoutineDoneDayDetailViewController(routine: r, day: day)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+    }
     
 }
 

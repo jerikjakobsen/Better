@@ -25,6 +25,7 @@ class RoutineHomeDayCell: UITableViewCell {
         _dayNameLabel = UILabel()
         _dayNameLabel.translatesAutoresizingMaskIntoConstraints = false
         _dayNameLabel.font = Fonts.Montserrat_Small_Medium
+        _dayNameLabel.textColor = Colors.blackTextColor
         
         _completedStatusImageView = UIImageView()
         _completedStatusImageView.translatesAutoresizingMaskIntoConstraints = false
