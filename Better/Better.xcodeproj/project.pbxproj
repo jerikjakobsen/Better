@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5200F3812BDB3B7000B3E66D /* LeftAlignedFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5200F3802BDB3B7000B3E66D /* LeftAlignedFlowLayout.swift */; };
+		5200F3832BDF5ACE00B3E66D /* RoutineDetailExerciseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5200F3822BDF5ACD00B3E66D /* RoutineDetailExerciseHeaderView.swift */; };
+		5200F3862BE08ECC00B3E66D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5200F3852BE08ECC00B3E66D /* HomeView.swift */; };
+		5200F3882BE08EDA00B3E66D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5200F3872BE08EDA00B3E66D /* HomeViewController.swift */; };
 		521B29E82BC85358007CCF11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B29E72BC85358007CCF11 /* AppDelegate.swift */; };
 		521B29EA2BC85358007CCF11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B29E92BC85358007CCF11 /* SceneDelegate.swift */; };
 		521B29EC2BC85358007CCF11 /* RoutineHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B29EB2BC85358007CCF11 /* RoutineHomeViewController.swift */; };
@@ -17,20 +21,37 @@
 		521B2A292BC85953007CCF11 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B2A282BC85953007CCF11 /* Fonts.swift */; };
 		521B2A2B2BC85D32007CCF11 /* RoutineHomeHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B2A2A2BC85D32007CCF11 /* RoutineHomeHeaderSectionView.swift */; };
 		521B2A2D2BC9B395007CCF11 /* RoutineHomeDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B2A2C2BC9B395007CCF11 /* RoutineHomeDayCell.swift */; };
-		521B2A2F2BC9B7EB007CCF11 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 521B2A2E2BC9B7EB007CCF11 /* check.png */; };
 		521B2A332BC9B90B007CCF11 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B2A322BC9B90B007CCF11 /* Day.swift */; };
 		522B24582BC9CA3700A7DDE2 /* RoutineSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B24572BC9CA3700A7DDE2 /* RoutineSelectionView.swift */; };
 		522B245A2BC9CE1700A7DDE2 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B24592BC9CE1700A7DDE2 /* Routine.swift */; };
 		522B245C2BCB18F800A7DDE2 /* RoutinSelectionOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B245B2BCB18F800A7DDE2 /* RoutinSelectionOptionView.swift */; };
 		522B245E2BCB19C600A7DDE2 /* RoutineSelectionOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B245D2BCB19C600A7DDE2 /* RoutineSelectionOptionViewController.swift */; };
 		522B24612BCB1E8000A7DDE2 /* RoutineSelectionOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B24602BCB1E8000A7DDE2 /* RoutineSelectionOptionCell.swift */; };
-		52E866852BCE2B7E00E2CB6C /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 52E866842BCE2B7D00E2CB6C /* settings.png */; };
-		52E866892BCE612600E2CB6C /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 52E866862BCE612600E2CB6C /* home.png */; };
-		52E8668A2BCE612600E2CB6C /* weight-scale.png in Resources */ = {isa = PBXBuildFile; fileRef = 52E866872BCE612600E2CB6C /* weight-scale.png */; };
-		52E8668B2BCE612600E2CB6C /* weightlifter.png in Resources */ = {isa = PBXBuildFile; fileRef = 52E866882BCE612600E2CB6C /* weightlifter.png */; };
+		52392A572BD1F8720008294E /* TimeInterval+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52392A562BD1F8720008294E /* TimeInterval+Operations.swift */; };
+		52392A592BD1FC2D0008294E /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52392A582BD1FC2D0008294E /* PaddedLabel.swift */; };
+		52392A5B2BD57C790008294E /* greenup.png in Resources */ = {isa = PBXBuildFile; fileRef = 52392A5A2BD57C790008294E /* greenup.png */; };
+		52392A5D2BD580A10008294E /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 52392A5C2BD580A10008294E /* check.png */; };
+		52392A5F2BD583230008294E /* greendown.png in Resources */ = {isa = PBXBuildFile; fileRef = 52392A5E2BD583230008294E /* greendown.png */; };
+		52392A622BD583800008294E /* redup.png in Resources */ = {isa = PBXBuildFile; fileRef = 52392A602BD583800008294E /* redup.png */; };
+		52392A632BD583800008294E /* reddown.png in Resources */ = {isa = PBXBuildFile; fileRef = 52392A612BD583800008294E /* reddown.png */; };
+		52392A7F2BD596700008294E /* startButtonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52392A7E2BD596700008294E /* startButtonIcon.png */; };
+		52E8668E2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8668D2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift */; };
+		52E866902BCEF2F900E2CB6C /* RoutineDayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8668F2BCEF2F900E2CB6C /* RoutineDayDetailView.swift */; };
+		52E866932BCEF50700E2CB6C /* MuscleGroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E866922BCEF50700E2CB6C /* MuscleGroupsView.swift */; };
+		52E866962BCF005100E2CB6C /* MuscleGroupsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E866952BCF005100E2CB6C /* MuscleGroupsViewCell.swift */; };
+		52E866982BCF014300E2CB6C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E866972BCF014300E2CB6C /* Colors.swift */; };
+		52E8669A2BCF0FE500E2CB6C /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E866992BCF0FE500E2CB6C /* Exercise.swift */; };
+		52E8669C2BCF104100E2CB6C /* MuscleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8669B2BCF104100E2CB6C /* MuscleGroup.swift */; };
+		52E8669E2BD06E6600E2CB6C /* RoutineDayDetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8669D2BD06E6600E2CB6C /* RoutineDayDetailsHeaderView.swift */; };
+		52E866A02BD07B4C00E2CB6C /* RoutineDayDetailsExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8669F2BD07B4C00E2CB6C /* RoutineDayDetailsExerciseCell.swift */; };
+		52E866A32BD07D9F00E2CB6C /* ExerciseStatRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E866A22BD07D9F00E2CB6C /* ExerciseStatRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5200F3802BDB3B7000B3E66D /* LeftAlignedFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedFlowLayout.swift; sourceTree = "<group>"; };
+		5200F3822BDF5ACD00B3E66D /* RoutineDetailExerciseHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDetailExerciseHeaderView.swift; sourceTree = "<group>"; };
+		5200F3852BE08ECC00B3E66D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5200F3872BE08EDA00B3E66D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		521B29E42BC85358007CCF11 /* Better.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Better.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		521B29E72BC85358007CCF11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		521B29E92BC85358007CCF11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,17 +64,30 @@
 		521B2A282BC85953007CCF11 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		521B2A2A2BC85D32007CCF11 /* RoutineHomeHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineHomeHeaderSectionView.swift; sourceTree = "<group>"; };
 		521B2A2C2BC9B395007CCF11 /* RoutineHomeDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineHomeDayCell.swift; sourceTree = "<group>"; };
-		521B2A2E2BC9B7EB007CCF11 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		521B2A322BC9B90B007CCF11 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		522B24572BC9CA3700A7DDE2 /* RoutineSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineSelectionView.swift; sourceTree = "<group>"; };
 		522B24592BC9CE1700A7DDE2 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		522B245B2BCB18F800A7DDE2 /* RoutinSelectionOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinSelectionOptionView.swift; sourceTree = "<group>"; };
 		522B245D2BCB19C600A7DDE2 /* RoutineSelectionOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineSelectionOptionViewController.swift; sourceTree = "<group>"; };
 		522B24602BCB1E8000A7DDE2 /* RoutineSelectionOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineSelectionOptionCell.swift; sourceTree = "<group>"; };
-		52E866842BCE2B7D00E2CB6C /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
-		52E866862BCE612600E2CB6C /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
-		52E866872BCE612600E2CB6C /* weight-scale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weight-scale.png"; sourceTree = "<group>"; };
-		52E866882BCE612600E2CB6C /* weightlifter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weightlifter.png; sourceTree = "<group>"; };
+		52392A562BD1F8720008294E /* TimeInterval+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Operations.swift"; sourceTree = "<group>"; };
+		52392A582BD1FC2D0008294E /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
+		52392A5A2BD57C790008294E /* greenup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenup.png; sourceTree = "<group>"; };
+		52392A5C2BD580A10008294E /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		52392A5E2BD583230008294E /* greendown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greendown.png; sourceTree = "<group>"; };
+		52392A602BD583800008294E /* redup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redup.png; sourceTree = "<group>"; };
+		52392A612BD583800008294E /* reddown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reddown.png; sourceTree = "<group>"; };
+		52392A7E2BD596700008294E /* startButtonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButtonIcon.png; sourceTree = "<group>"; };
+		52E8668D2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDoneDayDetailViewController.swift; sourceTree = "<group>"; };
+		52E8668F2BCEF2F900E2CB6C /* RoutineDayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDayDetailView.swift; sourceTree = "<group>"; };
+		52E866922BCEF50700E2CB6C /* MuscleGroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleGroupsView.swift; sourceTree = "<group>"; };
+		52E866952BCF005100E2CB6C /* MuscleGroupsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleGroupsViewCell.swift; sourceTree = "<group>"; };
+		52E866972BCF014300E2CB6C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		52E866992BCF0FE500E2CB6C /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		52E8669B2BCF104100E2CB6C /* MuscleGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleGroup.swift; sourceTree = "<group>"; };
+		52E8669D2BD06E6600E2CB6C /* RoutineDayDetailsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDayDetailsHeaderView.swift; sourceTree = "<group>"; };
+		52E8669F2BD07B4C00E2CB6C /* RoutineDayDetailsExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDayDetailsExerciseCell.swift; sourceTree = "<group>"; };
+		52E866A22BD07D9F00E2CB6C /* ExerciseStatRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStatRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5200F3842BE08EB800B3E66D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5200F3852BE08ECC00B3E66D /* HomeView.swift */,
+				5200F3872BE08EDA00B3E66D /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		521B29DB2BC85358007CCF11 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +129,9 @@
 		521B29E62BC85358007CCF11 /* Better */ = {
 			isa = PBXGroup;
 			children = (
+				5200F3842BE08EB800B3E66D /* Home */,
+				52392A552BD1F85D0008294E /* Extensions */,
+				52E866912BCEF4F100E2CB6C /* CommonComponents */,
 				521B2A312BC9B8F2007CCF11 /* DataModels */,
 				521B2A272BC85942007CCF11 /* Constants */,
 				521B2A002BC857CC007CCF11 /* Fonts */,
@@ -102,6 +148,7 @@
 		521B29FB2BC85439007CCF11 /* Routine */ = {
 			isa = PBXGroup;
 			children = (
+				52E8668C2BCEF28100E2CB6C /* RoutineDayDetails */,
 				521B29FD2BC854E1007CCF11 /* RoutineHome */,
 			);
 			path = Routine;
@@ -140,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				521B2A282BC85953007CCF11 /* Fonts.swift */,
+				52E866972BCF014300E2CB6C /* Colors.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -147,11 +195,12 @@
 		521B2A302BC9B807007CCF11 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				52E866862BCE612600E2CB6C /* home.png */,
-				52E866872BCE612600E2CB6C /* weight-scale.png */,
-				52E866882BCE612600E2CB6C /* weightlifter.png */,
-				52E866842BCE2B7D00E2CB6C /* settings.png */,
-				521B2A2E2BC9B7EB007CCF11 /* check.png */,
+				52392A7E2BD596700008294E /* startButtonIcon.png */,
+				52392A612BD583800008294E /* reddown.png */,
+				52392A602BD583800008294E /* redup.png */,
+				52392A5E2BD583230008294E /* greendown.png */,
+				52392A5C2BD580A10008294E /* check.png */,
+				52392A5A2BD57C790008294E /* greenup.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -161,6 +210,8 @@
 			children = (
 				521B2A322BC9B90B007CCF11 /* Day.swift */,
 				522B24592BC9CE1700A7DDE2 /* Routine.swift */,
+				52E866992BCF0FE500E2CB6C /* Exercise.swift */,
+				52E8669B2BCF104100E2CB6C /* MuscleGroup.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -174,6 +225,54 @@
 				522B24602BCB1E8000A7DDE2 /* RoutineSelectionOptionCell.swift */,
 			);
 			path = RoutineSelection;
+			sourceTree = "<group>";
+		};
+		52392A552BD1F85D0008294E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52392A562BD1F8720008294E /* TimeInterval+Operations.swift */,
+				5200F3802BDB3B7000B3E66D /* LeftAlignedFlowLayout.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52E8668C2BCEF28100E2CB6C /* RoutineDayDetails */ = {
+			isa = PBXGroup;
+			children = (
+				52E8668D2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift */,
+				52E8668F2BCEF2F900E2CB6C /* RoutineDayDetailView.swift */,
+				52E8669D2BD06E6600E2CB6C /* RoutineDayDetailsHeaderView.swift */,
+				52E866A12BD07CDF00E2CB6C /* RoutineDayDetailsExerciseCell */,
+				5200F3822BDF5ACD00B3E66D /* RoutineDetailExerciseHeaderView.swift */,
+			);
+			path = RoutineDayDetails;
+			sourceTree = "<group>";
+		};
+		52E866912BCEF4F100E2CB6C /* CommonComponents */ = {
+			isa = PBXGroup;
+			children = (
+				52E866942BCF003200E2CB6C /* MuscleGroupsView */,
+				52392A582BD1FC2D0008294E /* PaddedLabel.swift */,
+			);
+			path = CommonComponents;
+			sourceTree = "<group>";
+		};
+		52E866942BCF003200E2CB6C /* MuscleGroupsView */ = {
+			isa = PBXGroup;
+			children = (
+				52E866922BCEF50700E2CB6C /* MuscleGroupsView.swift */,
+				52E866952BCF005100E2CB6C /* MuscleGroupsViewCell.swift */,
+			);
+			path = MuscleGroupsView;
+			sourceTree = "<group>";
+		};
+		52E866A12BD07CDF00E2CB6C /* RoutineDayDetailsExerciseCell */ = {
+			isa = PBXGroup;
+			children = (
+				52E8669F2BD07B4C00E2CB6C /* RoutineDayDetailsExerciseCell.swift */,
+				52E866A22BD07D9F00E2CB6C /* ExerciseStatRowView.swift */,
+			);
+			path = RoutineDayDetailsExerciseCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,13 +334,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				521B29F42BC8535B007CCF11 /* LaunchScreen.storyboard in Resources */,
-				52E8668B2BCE612600E2CB6C /* weightlifter.png in Resources */,
-				52E866852BCE2B7E00E2CB6C /* settings.png in Resources */,
-				52E866892BCE612600E2CB6C /* home.png in Resources */,
-				52E8668A2BCE612600E2CB6C /* weight-scale.png in Resources */,
+				52392A5F2BD583230008294E /* greendown.png in Resources */,
+				52392A622BD583800008294E /* redup.png in Resources */,
+				52392A632BD583800008294E /* reddown.png in Resources */,
+				52392A5D2BD580A10008294E /* check.png in Resources */,
+				52392A7F2BD596700008294E /* startButtonIcon.png in Resources */,
 				521B2A262BC8581F007CCF11 /* Montserrat-VariableFont_wght.ttf in Resources */,
-				521B2A2F2BC9B7EB007CCF11 /* check.png in Resources */,
 				521B29F12BC8535B007CCF11 /* Assets.xcassets in Resources */,
+				52392A5B2BD57C790008294E /* greenup.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,17 +353,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				522B245A2BC9CE1700A7DDE2 /* Routine.swift in Sources */,
+				5200F3862BE08ECC00B3E66D /* HomeView.swift in Sources */,
+				52E866982BCF014300E2CB6C /* Colors.swift in Sources */,
+				52E8668E2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift in Sources */,
 				521B29EC2BC85358007CCF11 /* RoutineHomeViewController.swift in Sources */,
 				521B2A292BC85953007CCF11 /* Fonts.swift in Sources */,
+				5200F3832BDF5ACE00B3E66D /* RoutineDetailExerciseHeaderView.swift in Sources */,
 				521B2A332BC9B90B007CCF11 /* Day.swift in Sources */,
+				52E866932BCEF50700E2CB6C /* MuscleGroupsView.swift in Sources */,
 				521B29E82BC85358007CCF11 /* AppDelegate.swift in Sources */,
+				52E8669E2BD06E6600E2CB6C /* RoutineDayDetailsHeaderView.swift in Sources */,
+				52E866902BCEF2F900E2CB6C /* RoutineDayDetailView.swift in Sources */,
+				52E8669A2BCF0FE500E2CB6C /* Exercise.swift in Sources */,
+				52392A572BD1F8720008294E /* TimeInterval+Operations.swift in Sources */,
 				521B2A2B2BC85D32007CCF11 /* RoutineHomeHeaderSectionView.swift in Sources */,
+				52392A592BD1FC2D0008294E /* PaddedLabel.swift in Sources */,
 				521B29FF2BC85506007CCF11 /* RoutineHomeView.swift in Sources */,
 				522B24582BC9CA3700A7DDE2 /* RoutineSelectionView.swift in Sources */,
 				522B24612BCB1E8000A7DDE2 /* RoutineSelectionOptionCell.swift in Sources */,
+				5200F3882BE08EDA00B3E66D /* HomeViewController.swift in Sources */,
+				52E866A32BD07D9F00E2CB6C /* ExerciseStatRowView.swift in Sources */,
 				522B245C2BCB18F800A7DDE2 /* RoutinSelectionOptionView.swift in Sources */,
 				522B245E2BCB19C600A7DDE2 /* RoutineSelectionOptionViewController.swift in Sources */,
+				5200F3812BDB3B7000B3E66D /* LeftAlignedFlowLayout.swift in Sources */,
+				52E866962BCF005100E2CB6C /* MuscleGroupsViewCell.swift in Sources */,
+				52E866A02BD07B4C00E2CB6C /* RoutineDayDetailsExerciseCell.swift in Sources */,
 				521B29EA2BC85358007CCF11 /* SceneDelegate.swift in Sources */,
+				52E8669C2BCF104100E2CB6C /* MuscleGroup.swift in Sources */,
 				521B2A2D2BC9B395007CCF11 /* RoutineHomeDayCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
