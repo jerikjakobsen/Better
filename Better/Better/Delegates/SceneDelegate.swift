@@ -19,13 +19,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let tabBarController = UITabBarController()
+        tabBarController.tabBar.backgroundColor = .white
         let Home = UIViewController()
+        let _timeTaken: TimeInterval = 2718
+        let _averageTimeToComplete: TimeInterval = 2828
+        let _averageTimeBetweenExercises: TimeInterval = 138
+        Home.view = UIView()
+        let header = RoutineDayDetailsHeaderView(done: false, viewModel: .init(timeTaken: _timeTaken, averageTimeToComplete: _averageTimeToComplete, averageTimeBetweenExercises: _averageTimeBetweenExercises, muscleGroups: [
+            .init(name: "Hamstrings", id: ""),
+            .init(name: "Glutes", id: ""),
+            .init(name: "Calves", id: ""),
+            .init(name: "Biceps", id: ""),
+            .init(name: "Triceps", id: "")
+        ]))
+        header.translatesAutoresizingMaskIntoConstraints = false
+//        let rowView = ExerciseStatRowView(font: Fonts.Montserrat_Small_Medium)
+//        rowView.setInfo(leftTitle: "Testing a super long left title", rightTitle: "weight 0000000")
+//        rowView.translatesAutoresizingMaskIntoConstraints = false
+        Home.view.addSubview(header)
+        //Home.view.addSubview(rowView)
+        let constraints = [
+            header.leftAnchor.constraint(equalTo: Home.view.leftAnchor),
+            header.rightAnchor.constraint(equalTo: Home.view.rightAnchor),
+            header.topAnchor.constraint(equalTo: Home.view.safeAreaLayoutGuide.topAnchor),
+            header.bottomAnchor.constraint(lessThanOrEqualTo: Home.view.bottomAnchor),
+        ]
+        NSLayoutConstraint.activate(constraints)
         Home.tabBarItem = .init(title: "", image: UIImage(named: "home"), selectedImage: UIImage(named: "home"))
         
         let Weights = UIViewController()
         Weights.tabBarItem = .init(title: "", image: UIImage(named: "weight-scale"), selectedImage: UIImage(named: "weight-scale"))
+        let routineHomeNavigationController = UINavigationController(rootViewController: RoutineHomeViewController())
+        routineHomeNavigationController.navigationBar.backgroundColor = .white
         tabBarController.setViewControllers([
-            UINavigationController(rootViewController: RoutineHomeViewController()),
+            routineHomeNavigationController,
             UINavigationController(rootViewController: Home),
             UINavigationController(rootViewController: Weights)
         ], animated: true)
