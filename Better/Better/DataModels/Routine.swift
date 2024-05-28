@@ -10,5 +10,6 @@ import Foundation
 struct Routine {
     let id: String
     let name: String
-    let current_routine_number: Int
+    var current_routine_number: Int
+    let days: [Day]
 }

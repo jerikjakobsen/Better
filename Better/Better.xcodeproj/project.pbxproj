@@ -11,6 +11,10 @@
 		5200F3832BDF5ACE00B3E66D /* RoutineDetailExerciseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5200F3822BDF5ACD00B3E66D /* RoutineDetailExerciseHeaderView.swift */; };
 		5200F3862BE08ECC00B3E66D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5200F3852BE08ECC00B3E66D /* HomeView.swift */; };
 		5200F3882BE08EDA00B3E66D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5200F3872BE08EDA00B3E66D /* HomeViewController.swift */; };
+		5200F38A2BE3110600B3E66D /* Date+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5200F3892BE3110600B3E66D /* Date+Operations.swift */; };
+		5200F38E2BE31DF600B3E66D /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 5200F38D2BE31DF600B3E66D /* fire.png */; };
+		5210A6702BE56BF7008768EE /* RoutineDaySessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210A66F2BE56BF7008768EE /* RoutineDaySessionView.swift */; };
+		5210A6722BE56C02008768EE /* RoutineDaySessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210A6712BE56C02008768EE /* RoutineDaySessionViewController.swift */; };
 		521B29E82BC85358007CCF11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B29E72BC85358007CCF11 /* AppDelegate.swift */; };
 		521B29EA2BC85358007CCF11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B29E92BC85358007CCF11 /* SceneDelegate.swift */; };
 		521B29EC2BC85358007CCF11 /* RoutineHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B29EB2BC85358007CCF11 /* RoutineHomeViewController.swift */; };
@@ -35,6 +39,17 @@
 		52392A622BD583800008294E /* redup.png in Resources */ = {isa = PBXBuildFile; fileRef = 52392A602BD583800008294E /* redup.png */; };
 		52392A632BD583800008294E /* reddown.png in Resources */ = {isa = PBXBuildFile; fileRef = 52392A612BD583800008294E /* reddown.png */; };
 		52392A7F2BD596700008294E /* startButtonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52392A7E2BD596700008294E /* startButtonIcon.png */; };
+		527FD7AC2BE93A9400C3203E /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AB2BE93A9400C3203E /* TrainingSession.swift */; };
+		527FD7AE2BEA8F0400C3203E /* ExerciseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AD2BEA8F0400C3203E /* ExerciseSession.swift */; };
+		527FD7B02BEA900200C3203E /* SetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AF2BEA900200C3203E /* SetSession.swift */; };
+		527FD7B32BEC56D200C3203E /* RoutineExerciseSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7B22BEC56D200C3203E /* RoutineExerciseSessionView.swift */; };
+		527FD7B52BEC57BE00C3203E /* RoutineExerciseSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7B42BEC57BE00C3203E /* RoutineExerciseSessionViewController.swift */; };
+		527FD7B72BEC5A6400C3203E /* ExerciseRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7B62BEC5A6400C3203E /* ExerciseRecord.swift */; };
+		527FD7B92BEC5CE000C3203E /* RoutineExerciseSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7B82BEC5CE000C3203E /* RoutineExerciseSessionCell.swift */; };
+		527FD7BE2BF1428B00C3203E /* Array+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7BD2BF1428B00C3203E /* Array+Operations.swift */; };
+		528B06B72BFB20F80076997D /* ExerciseSessionPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528B06B62BFB20F80076997D /* ExerciseSessionPopUpView.swift */; };
+		528B06B92BFB21200076997D /* ExerciseSessionPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528B06B82BFB21200076997D /* ExerciseSessionPopUpViewController.swift */; };
+		528B06BB2BFB21AA0076997D /* ExerciseSessionPopUpRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528B06BA2BFB21AA0076997D /* ExerciseSessionPopUpRowView.swift */; };
 		52E8668E2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8668D2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift */; };
 		52E866902BCEF2F900E2CB6C /* RoutineDayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8668F2BCEF2F900E2CB6C /* RoutineDayDetailView.swift */; };
 		52E866932BCEF50700E2CB6C /* MuscleGroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E866922BCEF50700E2CB6C /* MuscleGroupsView.swift */; };
@@ -52,6 +67,10 @@
 		5200F3822BDF5ACD00B3E66D /* RoutineDetailExerciseHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDetailExerciseHeaderView.swift; sourceTree = "<group>"; };
 		5200F3852BE08ECC00B3E66D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5200F3872BE08EDA00B3E66D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5200F3892BE3110600B3E66D /* Date+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Operations.swift"; sourceTree = "<group>"; };
+		5200F38D2BE31DF600B3E66D /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		5210A66F2BE56BF7008768EE /* RoutineDaySessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDaySessionView.swift; sourceTree = "<group>"; };
+		5210A6712BE56C02008768EE /* RoutineDaySessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDaySessionViewController.swift; sourceTree = "<group>"; };
 		521B29E42BC85358007CCF11 /* Better.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Better.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		521B29E72BC85358007CCF11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		521B29E92BC85358007CCF11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +97,17 @@
 		52392A602BD583800008294E /* redup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redup.png; sourceTree = "<group>"; };
 		52392A612BD583800008294E /* reddown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reddown.png; sourceTree = "<group>"; };
 		52392A7E2BD596700008294E /* startButtonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButtonIcon.png; sourceTree = "<group>"; };
+		527FD7AB2BE93A9400C3203E /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
+		527FD7AD2BEA8F0400C3203E /* ExerciseSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSession.swift; sourceTree = "<group>"; };
+		527FD7AF2BEA900200C3203E /* SetSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSession.swift; sourceTree = "<group>"; };
+		527FD7B22BEC56D200C3203E /* RoutineExerciseSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineExerciseSessionView.swift; sourceTree = "<group>"; };
+		527FD7B42BEC57BE00C3203E /* RoutineExerciseSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineExerciseSessionViewController.swift; sourceTree = "<group>"; };
+		527FD7B62BEC5A6400C3203E /* ExerciseRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRecord.swift; sourceTree = "<group>"; };
+		527FD7B82BEC5CE000C3203E /* RoutineExerciseSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineExerciseSessionCell.swift; sourceTree = "<group>"; };
+		527FD7BD2BF1428B00C3203E /* Array+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Operations.swift"; sourceTree = "<group>"; };
+		528B06B62BFB20F80076997D /* ExerciseSessionPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSessionPopUpView.swift; sourceTree = "<group>"; };
+		528B06B82BFB21200076997D /* ExerciseSessionPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSessionPopUpViewController.swift; sourceTree = "<group>"; };
+		528B06BA2BFB21AA0076997D /* ExerciseSessionPopUpRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSessionPopUpRowView.swift; sourceTree = "<group>"; };
 		52E8668D2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDoneDayDetailViewController.swift; sourceTree = "<group>"; };
 		52E8668F2BCEF2F900E2CB6C /* RoutineDayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDayDetailView.swift; sourceTree = "<group>"; };
 		52E866922BCEF50700E2CB6C /* MuscleGroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleGroupsView.swift; sourceTree = "<group>"; };
@@ -108,6 +138,15 @@
 				5200F3872BE08EDA00B3E66D /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		5210A66E2BE56BC7008768EE /* RoutineDaySession */ = {
+			isa = PBXGroup;
+			children = (
+				5210A66F2BE56BF7008768EE /* RoutineDaySessionView.swift */,
+				5210A6712BE56C02008768EE /* RoutineDaySessionViewController.swift */,
+			);
+			path = RoutineDaySession;
 			sourceTree = "<group>";
 		};
 		521B29DB2BC85358007CCF11 = {
@@ -148,6 +187,8 @@
 		521B29FB2BC85439007CCF11 /* Routine */ = {
 			isa = PBXGroup;
 			children = (
+				527FD7B12BEC569D00C3203E /* RoutineExerciseSession */,
+				5210A66E2BE56BC7008768EE /* RoutineDaySession */,
 				52E8668C2BCEF28100E2CB6C /* RoutineDayDetails */,
 				521B29FD2BC854E1007CCF11 /* RoutineHome */,
 			);
@@ -195,6 +236,7 @@
 		521B2A302BC9B807007CCF11 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5200F38D2BE31DF600B3E66D /* fire.png */,
 				52392A7E2BD596700008294E /* startButtonIcon.png */,
 				52392A612BD583800008294E /* reddown.png */,
 				52392A602BD583800008294E /* redup.png */,
@@ -212,6 +254,10 @@
 				522B24592BC9CE1700A7DDE2 /* Routine.swift */,
 				52E866992BCF0FE500E2CB6C /* Exercise.swift */,
 				52E8669B2BCF104100E2CB6C /* MuscleGroup.swift */,
+				527FD7AB2BE93A9400C3203E /* TrainingSession.swift */,
+				527FD7AD2BEA8F0400C3203E /* ExerciseSession.swift */,
+				527FD7AF2BEA900200C3203E /* SetSession.swift */,
+				527FD7B62BEC5A6400C3203E /* ExerciseRecord.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -232,8 +278,31 @@
 			children = (
 				52392A562BD1F8720008294E /* TimeInterval+Operations.swift */,
 				5200F3802BDB3B7000B3E66D /* LeftAlignedFlowLayout.swift */,
+				5200F3892BE3110600B3E66D /* Date+Operations.swift */,
+				527FD7BD2BF1428B00C3203E /* Array+Operations.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		527FD7B12BEC569D00C3203E /* RoutineExerciseSession */ = {
+			isa = PBXGroup;
+			children = (
+				528B06B52BFB20A20076997D /* ExerciseSessionPopUp */,
+				527FD7B22BEC56D200C3203E /* RoutineExerciseSessionView.swift */,
+				527FD7B42BEC57BE00C3203E /* RoutineExerciseSessionViewController.swift */,
+				527FD7B82BEC5CE000C3203E /* RoutineExerciseSessionCell.swift */,
+			);
+			path = RoutineExerciseSession;
+			sourceTree = "<group>";
+		};
+		528B06B52BFB20A20076997D /* ExerciseSessionPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				528B06B62BFB20F80076997D /* ExerciseSessionPopUpView.swift */,
+				528B06B82BFB21200076997D /* ExerciseSessionPopUpViewController.swift */,
+				528B06BA2BFB21AA0076997D /* ExerciseSessionPopUpRowView.swift */,
+			);
+			path = ExerciseSessionPopUp;
 			sourceTree = "<group>";
 		};
 		52E8668C2BCEF28100E2CB6C /* RoutineDayDetails */ = {
@@ -336,6 +405,7 @@
 				521B29F42BC8535B007CCF11 /* LaunchScreen.storyboard in Resources */,
 				52392A5F2BD583230008294E /* greendown.png in Resources */,
 				52392A622BD583800008294E /* redup.png in Resources */,
+				5200F38E2BE31DF600B3E66D /* fire.png in Resources */,
 				52392A632BD583800008294E /* reddown.png in Resources */,
 				52392A5D2BD580A10008294E /* check.png in Resources */,
 				52392A7F2BD596700008294E /* startButtonIcon.png in Resources */,
@@ -354,31 +424,45 @@
 			files = (
 				522B245A2BC9CE1700A7DDE2 /* Routine.swift in Sources */,
 				5200F3862BE08ECC00B3E66D /* HomeView.swift in Sources */,
+				527FD7BE2BF1428B00C3203E /* Array+Operations.swift in Sources */,
 				52E866982BCF014300E2CB6C /* Colors.swift in Sources */,
 				52E8668E2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift in Sources */,
 				521B29EC2BC85358007CCF11 /* RoutineHomeViewController.swift in Sources */,
 				521B2A292BC85953007CCF11 /* Fonts.swift in Sources */,
 				5200F3832BDF5ACE00B3E66D /* RoutineDetailExerciseHeaderView.swift in Sources */,
+				528B06BB2BFB21AA0076997D /* ExerciseSessionPopUpRowView.swift in Sources */,
+				5210A6722BE56C02008768EE /* RoutineDaySessionViewController.swift in Sources */,
 				521B2A332BC9B90B007CCF11 /* Day.swift in Sources */,
+				527FD7B92BEC5CE000C3203E /* RoutineExerciseSessionCell.swift in Sources */,
 				52E866932BCEF50700E2CB6C /* MuscleGroupsView.swift in Sources */,
 				521B29E82BC85358007CCF11 /* AppDelegate.swift in Sources */,
 				52E8669E2BD06E6600E2CB6C /* RoutineDayDetailsHeaderView.swift in Sources */,
 				52E866902BCEF2F900E2CB6C /* RoutineDayDetailView.swift in Sources */,
 				52E8669A2BCF0FE500E2CB6C /* Exercise.swift in Sources */,
+				5200F38A2BE3110600B3E66D /* Date+Operations.swift in Sources */,
+				528B06B72BFB20F80076997D /* ExerciseSessionPopUpView.swift in Sources */,
 				52392A572BD1F8720008294E /* TimeInterval+Operations.swift in Sources */,
 				521B2A2B2BC85D32007CCF11 /* RoutineHomeHeaderSectionView.swift in Sources */,
+				527FD7B02BEA900200C3203E /* SetSession.swift in Sources */,
 				52392A592BD1FC2D0008294E /* PaddedLabel.swift in Sources */,
 				521B29FF2BC85506007CCF11 /* RoutineHomeView.swift in Sources */,
 				522B24582BC9CA3700A7DDE2 /* RoutineSelectionView.swift in Sources */,
+				528B06B92BFB21200076997D /* ExerciseSessionPopUpViewController.swift in Sources */,
+				527FD7AC2BE93A9400C3203E /* TrainingSession.swift in Sources */,
 				522B24612BCB1E8000A7DDE2 /* RoutineSelectionOptionCell.swift in Sources */,
 				5200F3882BE08EDA00B3E66D /* HomeViewController.swift in Sources */,
 				52E866A32BD07D9F00E2CB6C /* ExerciseStatRowView.swift in Sources */,
+				527FD7B52BEC57BE00C3203E /* RoutineExerciseSessionViewController.swift in Sources */,
 				522B245C2BCB18F800A7DDE2 /* RoutinSelectionOptionView.swift in Sources */,
 				522B245E2BCB19C600A7DDE2 /* RoutineSelectionOptionViewController.swift in Sources */,
+				527FD7AE2BEA8F0400C3203E /* ExerciseSession.swift in Sources */,
 				5200F3812BDB3B7000B3E66D /* LeftAlignedFlowLayout.swift in Sources */,
 				52E866962BCF005100E2CB6C /* MuscleGroupsViewCell.swift in Sources */,
 				52E866A02BD07B4C00E2CB6C /* RoutineDayDetailsExerciseCell.swift in Sources */,
 				521B29EA2BC85358007CCF11 /* SceneDelegate.swift in Sources */,
+				5210A6702BE56BF7008768EE /* RoutineDaySessionView.swift in Sources */,
+				527FD7B72BEC5A6400C3203E /* ExerciseRecord.swift in Sources */,
+				527FD7B32BEC56D200C3203E /* RoutineExerciseSessionView.swift in Sources */,
 				52E8669C2BCF104100E2CB6C /* MuscleGroup.swift in Sources */,
 				521B2A2D2BC9B395007CCF11 /* RoutineHomeDayCell.swift in Sources */,
 			);

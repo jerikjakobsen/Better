@@ -15,6 +15,7 @@ struct Fonts {
     static let Montserrat_Medium: UIFont = UIFont(name: "Montserrat", size: 24) ?? .systemFont(ofSize: 24)
     static let Montserrat_Medium_Large: UIFont = UIFont(name: "Montserrat", size: 32) ?? .systemFont(ofSize: 32)
     static let Montserrat_Large: UIFont = UIFont(name: "Montserrat", size: 42) ?? .systemFont(ofSize: 42)
+    static let Montserrat_Larger: UIFont = UIFont(name: "Montserrat", size: 52) ?? .systemFont(ofSize: 52)
 }
 
 extension UIFont {
@@ -32,6 +33,10 @@ extension UIFont {
 
             return UIFont(descriptor: descriptor, size: pointSize)
         }
+    
+    func semibold() -> UIFont {
+        return self.withWeight(.regular)
+    }
     
     func bold() -> UIFont {
         return self.withWeight(.medium)

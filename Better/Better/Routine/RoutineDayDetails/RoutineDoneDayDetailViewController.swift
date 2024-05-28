@@ -26,7 +26,7 @@ class RoutineDoneDayDetailViewController: UIViewController, RoutineDayDetailView
     init(routine: Routine, day: Day) {
         self._routine = routine
         self._day = day
-        self._routineDayDetailView = RoutineDayDetailView(done: true, headerViewModel: .init(timeTaken: _timeTaken, averageTimeToComplete: _averageTimeToComplete, averageTimeBetweenExercises: _averageTimeBetweenExercises, muscleGroups: [
+        self._routineDayDetailView = RoutineDayDetailView(done: false, headerViewModel: .init(timeTaken: _timeTaken, averageTimeToComplete: _averageTimeToComplete, averageTimeBetweenExercises: _averageTimeBetweenExercises, muscleGroups: [
             .init(name: "Hamstrings", id: ""),
             .init(name: "Glutes", id: ""),
             .init(name: "Calves", id: "")
@@ -35,7 +35,7 @@ class RoutineDoneDayDetailViewController: UIViewController, RoutineDayDetailView
         super.init(nibName: nil, bundle: nil)
         
         let titleView = UILabel()
-        titleView.font = Fonts.Montserrat_Medium
+        titleView.font = Fonts.Montserrat_Medium.bolder()
         titleView.textColor = Colors.blackTextColor
         titleView.text = day.name
         
@@ -71,5 +71,11 @@ class RoutineDoneDayDetailViewController: UIViewController, RoutineDayDetailView
     
     func exerciseForRow(_ row: Int) -> Exercise {
         return self._exercises[row]
+    }
+    
+    func didTapStart() {
+        let daySessionVC = RoutineDaySessionViewController(exercises: self._exercises, routine: self._routine, day: self._day)
+        self.navigationController?.pushViewController(daySessionVC, animated: true)
+        
     }
 }

@@ -41,6 +41,10 @@ class RoutineDetailExerciseHeaderView: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setTitle(_ title: String) {
+        self._titleLabel.text = title
+    }
+    
     func _autolayoutSubviews() {
         let constraints = [
             _titleLabel.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 10),
