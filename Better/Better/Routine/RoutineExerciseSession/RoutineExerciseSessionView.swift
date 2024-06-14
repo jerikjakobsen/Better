@@ -17,6 +17,7 @@ protocol RoutineExerciseSessionViewDelegate {
     func numberOfRows(_ tableview: UITableView) -> Int
     func exerciseSessionForRow(_ row: Int) -> ExerciseSession
     func didTapRow(_ tableview: UITableView, row: Int)
+    func didTapStartButton(_ button: UIButton)
 }
 
 class RoutineExerciseSessionView: UIView, UITableViewDelegate, UITableViewDataSource {
@@ -69,6 +70,7 @@ class RoutineExerciseSessionView: UIView, UITableViewDelegate, UITableViewDataSo
         self.addSubview(_tableView)
         
         self.autolayoutSubviews()
+        _startButton.addTarget(self, action: #selector(self.didTapStartButton), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
@@ -117,5 +119,9 @@ class RoutineExerciseSessionView: UIView, UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.didTapRow(_tableView, row: indexPath.row)
+    }
+    
+    @objc func didTapStartButton() {
+        self.delegate?.didTapStartButton(_startButton)
     }
 }

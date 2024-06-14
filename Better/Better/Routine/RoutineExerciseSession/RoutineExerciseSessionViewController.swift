@@ -53,4 +53,9 @@ class RoutineExerciseSessionViewController: UIViewController, RoutineExerciseSes
         vc.modalTransitionStyle = .coverVertical
         self.present(vc, animated: true)
     }
+    
+    func didTapStartButton(_ button: UIButton) {
+        let vc = SessionInProgressViewController(exercise: self._exercise, day: _day)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

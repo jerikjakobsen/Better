@@ -38,28 +38,19 @@ class ExerciseSession {
     var endTime: Date? = nil
     var setSessions: [SetSession] = []
     
-    static var current_exercise_session: ExerciseSession? = nil
+    //static var current_exercise_session: ExerciseSession? = nil
     
     init(startTime: Date, exercise: Exercise) {
         self.startTime = startTime
         self.exercise = exercise
     }
     
-    static func startExerciseSession(exercise: Exercise) throws {
-        guard current_exercise_session == nil else {
-            throw ExerciseSessionError.SessionAlreadyActive
-        }
-        ExerciseSession.current_exercise_session = ExerciseSession(startTime: Date.now, exercise: exercise)
+    static func startExerciseSession(exercise: Exercise) -> ExerciseSession {
+        return ExerciseSession(startTime: Date.now, exercise: exercise)
     }
     
-    static func endExerciseSession() throws -> ExerciseSession {
-        guard let currentExerciseSession = ExerciseSession.current_exercise_session else {
-            throw ExerciseSessionError.NoSessionActive
-        }
-        
-        ExerciseSession.current_exercise_session = nil
-        
-        return currentExerciseSession
+    func endExerciseSession() {
+        self.endTime = Date.now
     }
     
     

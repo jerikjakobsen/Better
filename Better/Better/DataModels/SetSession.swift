@@ -14,6 +14,9 @@ class SetSession {
     let endTime: Date
     let weight: Float
     let reps: Int
+    var duration: TimeInterval {
+        return endTime.timeIntervalSince(startTime)
+    }
     
     init(startTime: Date, endTime: Date, weight: Float, reps: Int) {
         self.startTime = startTime

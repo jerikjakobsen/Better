@@ -42,4 +42,10 @@ extension Date {
         timeFormatter.dateFormat = "h:mm a"
         return "\(dateFormatter.string(from: self)) at \(timeFormatter.string(from: self))"
     }
+    
+    func dateStringFormatted(format: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
+    }
 }

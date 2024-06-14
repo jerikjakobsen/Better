@@ -38,7 +38,10 @@
 		52392A5F2BD583230008294E /* greendown.png in Resources */ = {isa = PBXBuildFile; fileRef = 52392A5E2BD583230008294E /* greendown.png */; };
 		52392A622BD583800008294E /* redup.png in Resources */ = {isa = PBXBuildFile; fileRef = 52392A602BD583800008294E /* redup.png */; };
 		52392A632BD583800008294E /* reddown.png in Resources */ = {isa = PBXBuildFile; fileRef = 52392A612BD583800008294E /* reddown.png */; };
-		52392A7F2BD596700008294E /* startButtonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52392A7E2BD596700008294E /* startButtonIcon.png */; };
+		52399E762C08E49700B95F04 /* SessionInProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52399E732C08E49600B95F04 /* SessionInProgressViewController.swift */; };
+		52399E772C08E49700B95F04 /* SessionInProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52399E742C08E49600B95F04 /* SessionInProgressView.swift */; };
+		52399E782C08E49700B95F04 /* SessionInProgressSetRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52399E752C08E49600B95F04 /* SessionInProgressSetRecordCell.swift */; };
+		52399E7A2C0A035300B95F04 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52399E792C0A035300B95F04 /* UnderlinedTextField.swift */; };
 		527FD7AC2BE93A9400C3203E /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AB2BE93A9400C3203E /* TrainingSession.swift */; };
 		527FD7AE2BEA8F0400C3203E /* ExerciseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AD2BEA8F0400C3203E /* ExerciseSession.swift */; };
 		527FD7B02BEA900200C3203E /* SetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AF2BEA900200C3203E /* SetSession.swift */; };
@@ -50,6 +53,10 @@
 		528B06B72BFB20F80076997D /* ExerciseSessionPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528B06B62BFB20F80076997D /* ExerciseSessionPopUpView.swift */; };
 		528B06B92BFB21200076997D /* ExerciseSessionPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528B06B82BFB21200076997D /* ExerciseSessionPopUpViewController.swift */; };
 		528B06BB2BFB21AA0076997D /* ExerciseSessionPopUpRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528B06BA2BFB21AA0076997D /* ExerciseSessionPopUpRowView.swift */; };
+		52B067A02C1641DA000E5615 /* SessionNotesPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0679F2C1641DA000E5615 /* SessionNotesPopUpView.swift */; };
+		52B067A22C1641E5000E5615 /* SessionNotesPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B067A12C1641E5000E5615 /* SessionNotesPopUpViewController.swift */; };
+		52B067A42C17E192000E5615 /* BetterAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B067A32C17E192000E5615 /* BetterAlertController.swift */; };
+		52B067A72C17E247000E5615 /* BetterAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B067A62C17E247000E5615 /* BetterAlertView.swift */; };
 		52E8668E2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8668D2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift */; };
 		52E866902BCEF2F900E2CB6C /* RoutineDayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8668F2BCEF2F900E2CB6C /* RoutineDayDetailView.swift */; };
 		52E866932BCEF50700E2CB6C /* MuscleGroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E866922BCEF50700E2CB6C /* MuscleGroupsView.swift */; };
@@ -60,6 +67,8 @@
 		52E8669E2BD06E6600E2CB6C /* RoutineDayDetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8669D2BD06E6600E2CB6C /* RoutineDayDetailsHeaderView.swift */; };
 		52E866A02BD07B4C00E2CB6C /* RoutineDayDetailsExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8669F2BD07B4C00E2CB6C /* RoutineDayDetailsExerciseCell.swift */; };
 		52E866A32BD07D9F00E2CB6C /* ExerciseStatRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E866A22BD07D9F00E2CB6C /* ExerciseStatRowView.swift */; };
+		52ECD66B2C126A3A004EBBA3 /* startButtonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52ECD66A2C126A3A004EBBA3 /* startButtonIcon.png */; };
+		52ECD66D2C126AE4004EBBA3 /* endButtonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52ECD66C2C126AE4004EBBA3 /* endButtonIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,7 +105,10 @@
 		52392A5E2BD583230008294E /* greendown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greendown.png; sourceTree = "<group>"; };
 		52392A602BD583800008294E /* redup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redup.png; sourceTree = "<group>"; };
 		52392A612BD583800008294E /* reddown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reddown.png; sourceTree = "<group>"; };
-		52392A7E2BD596700008294E /* startButtonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButtonIcon.png; sourceTree = "<group>"; };
+		52399E732C08E49600B95F04 /* SessionInProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionInProgressViewController.swift; sourceTree = "<group>"; };
+		52399E742C08E49600B95F04 /* SessionInProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionInProgressView.swift; sourceTree = "<group>"; };
+		52399E752C08E49600B95F04 /* SessionInProgressSetRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionInProgressSetRecordCell.swift; sourceTree = "<group>"; };
+		52399E792C0A035300B95F04 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 		527FD7AB2BE93A9400C3203E /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
 		527FD7AD2BEA8F0400C3203E /* ExerciseSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSession.swift; sourceTree = "<group>"; };
 		527FD7AF2BEA900200C3203E /* SetSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSession.swift; sourceTree = "<group>"; };
@@ -108,6 +120,10 @@
 		528B06B62BFB20F80076997D /* ExerciseSessionPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSessionPopUpView.swift; sourceTree = "<group>"; };
 		528B06B82BFB21200076997D /* ExerciseSessionPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSessionPopUpViewController.swift; sourceTree = "<group>"; };
 		528B06BA2BFB21AA0076997D /* ExerciseSessionPopUpRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSessionPopUpRowView.swift; sourceTree = "<group>"; };
+		52B0679F2C1641DA000E5615 /* SessionNotesPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionNotesPopUpView.swift; sourceTree = "<group>"; };
+		52B067A12C1641E5000E5615 /* SessionNotesPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionNotesPopUpViewController.swift; sourceTree = "<group>"; };
+		52B067A32C17E192000E5615 /* BetterAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterAlertController.swift; sourceTree = "<group>"; };
+		52B067A62C17E247000E5615 /* BetterAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterAlertView.swift; sourceTree = "<group>"; };
 		52E8668D2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDoneDayDetailViewController.swift; sourceTree = "<group>"; };
 		52E8668F2BCEF2F900E2CB6C /* RoutineDayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDayDetailView.swift; sourceTree = "<group>"; };
 		52E866922BCEF50700E2CB6C /* MuscleGroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleGroupsView.swift; sourceTree = "<group>"; };
@@ -118,6 +134,8 @@
 		52E8669D2BD06E6600E2CB6C /* RoutineDayDetailsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDayDetailsHeaderView.swift; sourceTree = "<group>"; };
 		52E8669F2BD07B4C00E2CB6C /* RoutineDayDetailsExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDayDetailsExerciseCell.swift; sourceTree = "<group>"; };
 		52E866A22BD07D9F00E2CB6C /* ExerciseStatRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStatRowView.swift; sourceTree = "<group>"; };
+		52ECD66A2C126A3A004EBBA3 /* startButtonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButtonIcon.png; sourceTree = "<group>"; };
+		52ECD66C2C126AE4004EBBA3 /* endButtonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = endButtonIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +205,7 @@
 		521B29FB2BC85439007CCF11 /* Routine */ = {
 			isa = PBXGroup;
 			children = (
+				52399E722C08E48B00B95F04 /* Session */,
 				527FD7B12BEC569D00C3203E /* RoutineExerciseSession */,
 				5210A66E2BE56BC7008768EE /* RoutineDaySession */,
 				52E8668C2BCEF28100E2CB6C /* RoutineDayDetails */,
@@ -236,8 +255,9 @@
 		521B2A302BC9B807007CCF11 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				52ECD66C2C126AE4004EBBA3 /* endButtonIcon.png */,
+				52ECD66A2C126A3A004EBBA3 /* startButtonIcon.png */,
 				5200F38D2BE31DF600B3E66D /* fire.png */,
-				52392A7E2BD596700008294E /* startButtonIcon.png */,
 				52392A612BD583800008294E /* reddown.png */,
 				52392A602BD583800008294E /* redup.png */,
 				52392A5E2BD583230008294E /* greendown.png */,
@@ -284,6 +304,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		52399E722C08E48B00B95F04 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				52B0679E2C1641AE000E5615 /* SessionNotesPopUp */,
+				52399E752C08E49600B95F04 /* SessionInProgressSetRecordCell.swift */,
+				52399E742C08E49600B95F04 /* SessionInProgressView.swift */,
+				52399E732C08E49600B95F04 /* SessionInProgressViewController.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 		527FD7B12BEC569D00C3203E /* RoutineExerciseSession */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +336,24 @@
 			path = ExerciseSessionPopUp;
 			sourceTree = "<group>";
 		};
+		52B0679E2C1641AE000E5615 /* SessionNotesPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				52B0679F2C1641DA000E5615 /* SessionNotesPopUpView.swift */,
+				52B067A12C1641E5000E5615 /* SessionNotesPopUpViewController.swift */,
+			);
+			path = SessionNotesPopUp;
+			sourceTree = "<group>";
+		};
+		52B067A52C17E232000E5615 /* BetterAlert */ = {
+			isa = PBXGroup;
+			children = (
+				52B067A32C17E192000E5615 /* BetterAlertController.swift */,
+				52B067A62C17E247000E5615 /* BetterAlertView.swift */,
+			);
+			path = BetterAlert;
+			sourceTree = "<group>";
+		};
 		52E8668C2BCEF28100E2CB6C /* RoutineDayDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +371,8 @@
 			children = (
 				52E866942BCF003200E2CB6C /* MuscleGroupsView */,
 				52392A582BD1FC2D0008294E /* PaddedLabel.swift */,
+				52399E792C0A035300B95F04 /* UnderlinedTextField.swift */,
+				52B067A52C17E232000E5615 /* BetterAlert */,
 			);
 			path = CommonComponents;
 			sourceTree = "<group>";
@@ -406,9 +457,10 @@
 				52392A5F2BD583230008294E /* greendown.png in Resources */,
 				52392A622BD583800008294E /* redup.png in Resources */,
 				5200F38E2BE31DF600B3E66D /* fire.png in Resources */,
+				52ECD66D2C126AE4004EBBA3 /* endButtonIcon.png in Resources */,
 				52392A632BD583800008294E /* reddown.png in Resources */,
 				52392A5D2BD580A10008294E /* check.png in Resources */,
-				52392A7F2BD596700008294E /* startButtonIcon.png in Resources */,
+				52ECD66B2C126A3A004EBBA3 /* startButtonIcon.png in Resources */,
 				521B2A262BC8581F007CCF11 /* Montserrat-VariableFont_wght.ttf in Resources */,
 				521B29F12BC8535B007CCF11 /* Assets.xcassets in Resources */,
 				52392A5B2BD57C790008294E /* greenup.png in Resources */,
@@ -423,7 +475,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				522B245A2BC9CE1700A7DDE2 /* Routine.swift in Sources */,
+				52B067A72C17E247000E5615 /* BetterAlertView.swift in Sources */,
 				5200F3862BE08ECC00B3E66D /* HomeView.swift in Sources */,
+				52B067A02C1641DA000E5615 /* SessionNotesPopUpView.swift in Sources */,
 				527FD7BE2BF1428B00C3203E /* Array+Operations.swift in Sources */,
 				52E866982BCF014300E2CB6C /* Colors.swift in Sources */,
 				52E8668E2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift in Sources */,
@@ -438,19 +492,23 @@
 				521B29E82BC85358007CCF11 /* AppDelegate.swift in Sources */,
 				52E8669E2BD06E6600E2CB6C /* RoutineDayDetailsHeaderView.swift in Sources */,
 				52E866902BCEF2F900E2CB6C /* RoutineDayDetailView.swift in Sources */,
+				52B067A42C17E192000E5615 /* BetterAlertController.swift in Sources */,
 				52E8669A2BCF0FE500E2CB6C /* Exercise.swift in Sources */,
 				5200F38A2BE3110600B3E66D /* Date+Operations.swift in Sources */,
 				528B06B72BFB20F80076997D /* ExerciseSessionPopUpView.swift in Sources */,
 				52392A572BD1F8720008294E /* TimeInterval+Operations.swift in Sources */,
 				521B2A2B2BC85D32007CCF11 /* RoutineHomeHeaderSectionView.swift in Sources */,
+				52399E772C08E49700B95F04 /* SessionInProgressView.swift in Sources */,
 				527FD7B02BEA900200C3203E /* SetSession.swift in Sources */,
 				52392A592BD1FC2D0008294E /* PaddedLabel.swift in Sources */,
+				52B067A22C1641E5000E5615 /* SessionNotesPopUpViewController.swift in Sources */,
 				521B29FF2BC85506007CCF11 /* RoutineHomeView.swift in Sources */,
 				522B24582BC9CA3700A7DDE2 /* RoutineSelectionView.swift in Sources */,
 				528B06B92BFB21200076997D /* ExerciseSessionPopUpViewController.swift in Sources */,
 				527FD7AC2BE93A9400C3203E /* TrainingSession.swift in Sources */,
 				522B24612BCB1E8000A7DDE2 /* RoutineSelectionOptionCell.swift in Sources */,
 				5200F3882BE08EDA00B3E66D /* HomeViewController.swift in Sources */,
+				52399E782C08E49700B95F04 /* SessionInProgressSetRecordCell.swift in Sources */,
 				52E866A32BD07D9F00E2CB6C /* ExerciseStatRowView.swift in Sources */,
 				527FD7B52BEC57BE00C3203E /* RoutineExerciseSessionViewController.swift in Sources */,
 				522B245C2BCB18F800A7DDE2 /* RoutinSelectionOptionView.swift in Sources */,
@@ -460,11 +518,13 @@
 				52E866962BCF005100E2CB6C /* MuscleGroupsViewCell.swift in Sources */,
 				52E866A02BD07B4C00E2CB6C /* RoutineDayDetailsExerciseCell.swift in Sources */,
 				521B29EA2BC85358007CCF11 /* SceneDelegate.swift in Sources */,
+				52399E7A2C0A035300B95F04 /* UnderlinedTextField.swift in Sources */,
 				5210A6702BE56BF7008768EE /* RoutineDaySessionView.swift in Sources */,
 				527FD7B72BEC5A6400C3203E /* ExerciseRecord.swift in Sources */,
 				527FD7B32BEC56D200C3203E /* RoutineExerciseSessionView.swift in Sources */,
 				52E8669C2BCF104100E2CB6C /* MuscleGroup.swift in Sources */,
 				521B2A2D2BC9B395007CCF11 /* RoutineHomeDayCell.swift in Sources */,
+				52399E762C08E49700B95F04 /* SessionInProgressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
