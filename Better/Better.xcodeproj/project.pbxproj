@@ -42,6 +42,10 @@
 		52399E772C08E49700B95F04 /* SessionInProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52399E742C08E49600B95F04 /* SessionInProgressView.swift */; };
 		52399E782C08E49700B95F04 /* SessionInProgressSetRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52399E752C08E49600B95F04 /* SessionInProgressSetRecordCell.swift */; };
 		52399E7A2C0A035300B95F04 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52399E792C0A035300B95F04 /* UnderlinedTextField.swift */; };
+		52448AFD2C1D1B0100E345F5 /* RoutineSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52448AFC2C1D1B0100E345F5 /* RoutineSettingsView.swift */; };
+		52448AFF2C1D1B1D00E345F5 /* RoutineSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52448AFE2C1D1B1D00E345F5 /* RoutineSettingsViewController.swift */; };
+		52448B012C1D1C8D00E345F5 /* RoutineSettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52448B002C1D1C8D00E345F5 /* RoutineSettingsRowView.swift */; };
+		52448B032C1D213400E345F5 /* RightChevronButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52448B022C1D213400E345F5 /* RightChevronButton.swift */; };
 		527FD7AC2BE93A9400C3203E /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AB2BE93A9400C3203E /* TrainingSession.swift */; };
 		527FD7AE2BEA8F0400C3203E /* ExerciseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AD2BEA8F0400C3203E /* ExerciseSession.swift */; };
 		527FD7B02BEA900200C3203E /* SetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AF2BEA900200C3203E /* SetSession.swift */; };
@@ -109,6 +113,10 @@
 		52399E742C08E49600B95F04 /* SessionInProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionInProgressView.swift; sourceTree = "<group>"; };
 		52399E752C08E49600B95F04 /* SessionInProgressSetRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionInProgressSetRecordCell.swift; sourceTree = "<group>"; };
 		52399E792C0A035300B95F04 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
+		52448AFC2C1D1B0100E345F5 /* RoutineSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineSettingsView.swift; sourceTree = "<group>"; };
+		52448AFE2C1D1B1D00E345F5 /* RoutineSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineSettingsViewController.swift; sourceTree = "<group>"; };
+		52448B002C1D1C8D00E345F5 /* RoutineSettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineSettingsRowView.swift; sourceTree = "<group>"; };
+		52448B022C1D213400E345F5 /* RightChevronButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightChevronButton.swift; sourceTree = "<group>"; };
 		527FD7AB2BE93A9400C3203E /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
 		527FD7AD2BEA8F0400C3203E /* ExerciseSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSession.swift; sourceTree = "<group>"; };
 		527FD7AF2BEA900200C3203E /* SetSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSession.swift; sourceTree = "<group>"; };
@@ -205,6 +213,7 @@
 		521B29FB2BC85439007CCF11 /* Routine */ = {
 			isa = PBXGroup;
 			children = (
+				52448AFB2C1D1AE900E345F5 /* RoutineSettings */,
 				52399E722C08E48B00B95F04 /* Session */,
 				527FD7B12BEC569D00C3203E /* RoutineExerciseSession */,
 				5210A66E2BE56BC7008768EE /* RoutineDaySession */,
@@ -313,6 +322,17 @@
 				52399E732C08E49600B95F04 /* SessionInProgressViewController.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		52448AFB2C1D1AE900E345F5 /* RoutineSettings */ = {
+			isa = PBXGroup;
+			children = (
+				52448AFC2C1D1B0100E345F5 /* RoutineSettingsView.swift */,
+				52448AFE2C1D1B1D00E345F5 /* RoutineSettingsViewController.swift */,
+				52448B002C1D1C8D00E345F5 /* RoutineSettingsRowView.swift */,
+				52448B022C1D213400E345F5 /* RightChevronButton.swift */,
+			);
+			path = RoutineSettings;
 			sourceTree = "<group>";
 		};
 		527FD7B12BEC569D00C3203E /* RoutineExerciseSession */ = {
@@ -481,15 +501,18 @@
 				527FD7BE2BF1428B00C3203E /* Array+Operations.swift in Sources */,
 				52E866982BCF014300E2CB6C /* Colors.swift in Sources */,
 				52E8668E2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift in Sources */,
+				52448B012C1D1C8D00E345F5 /* RoutineSettingsRowView.swift in Sources */,
 				521B29EC2BC85358007CCF11 /* RoutineHomeViewController.swift in Sources */,
 				521B2A292BC85953007CCF11 /* Fonts.swift in Sources */,
 				5200F3832BDF5ACE00B3E66D /* RoutineDetailExerciseHeaderView.swift in Sources */,
+				52448AFD2C1D1B0100E345F5 /* RoutineSettingsView.swift in Sources */,
 				528B06BB2BFB21AA0076997D /* ExerciseSessionPopUpRowView.swift in Sources */,
 				5210A6722BE56C02008768EE /* RoutineDaySessionViewController.swift in Sources */,
 				521B2A332BC9B90B007CCF11 /* Day.swift in Sources */,
 				527FD7B92BEC5CE000C3203E /* RoutineExerciseSessionCell.swift in Sources */,
 				52E866932BCEF50700E2CB6C /* MuscleGroupsView.swift in Sources */,
 				521B29E82BC85358007CCF11 /* AppDelegate.swift in Sources */,
+				52448B032C1D213400E345F5 /* RightChevronButton.swift in Sources */,
 				52E8669E2BD06E6600E2CB6C /* RoutineDayDetailsHeaderView.swift in Sources */,
 				52E866902BCEF2F900E2CB6C /* RoutineDayDetailView.swift in Sources */,
 				52B067A42C17E192000E5615 /* BetterAlertController.swift in Sources */,
@@ -503,6 +526,7 @@
 				52392A592BD1FC2D0008294E /* PaddedLabel.swift in Sources */,
 				52B067A22C1641E5000E5615 /* SessionNotesPopUpViewController.swift in Sources */,
 				521B29FF2BC85506007CCF11 /* RoutineHomeView.swift in Sources */,
+				52448AFF2C1D1B1D00E345F5 /* RoutineSettingsViewController.swift in Sources */,
 				522B24582BC9CA3700A7DDE2 /* RoutineSelectionView.swift in Sources */,
 				528B06B92BFB21200076997D /* ExerciseSessionPopUpViewController.swift in Sources */,
 				527FD7AC2BE93A9400C3203E /* TrainingSession.swift in Sources */,

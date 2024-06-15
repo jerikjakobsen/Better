@@ -52,7 +52,8 @@ class RoutineHomeViewController: UIViewController {
     }
 
     @objc private func didTapSettings() {
-        print("settings")
+        let settingsVC = RoutineSettingsViewController()
+        self.navigationController?.pushViewController(settingsVC, animated: true)
     }
 
 }
