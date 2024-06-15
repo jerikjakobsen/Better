@@ -49,7 +49,6 @@ class RoutineDaySessionViewController: UIViewController, RoutineDaySessionViewDe
         quitButton.addTarget(self, action: #selector(self.didTapDone), for: .touchUpInside)
         Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         _routineDaySessionView.delegate = self
-        
         do {
             try TrainingSession.startCurrentTrainingSession(routine: routine, day: day)
         } catch {
@@ -91,4 +90,32 @@ class RoutineDaySessionViewController: UIViewController, RoutineDaySessionViewDe
         let seconds = timeInterval.seconds
         self._routineDaySessionView._timerLabel.text = String(format: "%02d : %02d : %02d", hours, minutes, seconds)
     }
+}
+
+extension RoutineDaySessionViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if let navController = viewController as? UINavigationController {
+            let alert = BetterAlertController(title: "Are you sure you want to quit?", defaultFont: Fonts.Montserrat_Small_Medium.bold(), defaultColor: Colors.blackTextColor)
+            alert.addAction(title: "Quit", color: Colors.redColor, font: Fonts.Montserrat_Small_Medium) { _ in
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+            alert.addAction(title: "Back", color: Colors.blackTextColor, font: Fonts.Montserrat_Small_Medium)
+            
+            for vc in navController.viewControllers {
+                switch vc {
+                case is RoutineExerciseSessionViewController:
+                    fallthrough
+                case is RoutineDaySessionViewController:
+                    self.present(alert, animated: true)
+                    return false
+                default:
+                    break
+                }
+            }
+            return true
+        }
+        
+        return true
+    }
+    
 }

@@ -76,6 +76,6 @@ class RoutineDoneDayDetailViewController: UIViewController, RoutineDayDetailView
     func didTapStart() {
         let daySessionVC = RoutineDaySessionViewController(exercises: self._exercises, routine: self._routine, day: self._day)
         self.navigationController?.pushViewController(daySessionVC, animated: true)
-        
+        daySessionVC.tabBarController?.delegate = daySessionVC
     }
 }
