@@ -37,7 +37,7 @@ class RoutineHomeViewController: UIViewController {
         self.navigationItem.titleView = self._routineSelectionView
         self.navigationController?.navigationBar.prefersLargeTitles = false
         
-        self.navigationItem.rightBarButtonItem = .init(image: UIImage(named: "settings"), style: .plain, target: self, action: #selector(self.didTapSettings))
+        self.navigationItem.rightBarButtonItem = .init(image: UIImage(named: "settings")?.withTintColor(Colors.blackTextColor, renderingMode: .alwaysOriginal), style: .plain, target: self, action: #selector(self.didTapSettings))
     }
     
     required init?(coder: NSCoder) {

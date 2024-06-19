@@ -19,7 +19,7 @@ class RightChevronButton: UIButton {
         super.init(frame: CGRect())
         self.buttonAction = action
         
-        self.setImage(UIImage(systemName: "chevron.right")?.withTintColor(Colors.greyTextColor, renderingMode: .alwaysOriginal), for: .normal)
+        self.setImage(UIImage(systemName: "chevron.right")?.withTintColor(Colors.linkColor, renderingMode: .alwaysOriginal), for: .normal)
         self.addTarget(self, action: #selector(self.didTapButton), for: .touchUpInside)
     }
     

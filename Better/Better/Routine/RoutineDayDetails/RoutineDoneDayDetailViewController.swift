@@ -44,6 +44,14 @@ class RoutineDoneDayDetailViewController: UIViewController, RoutineDayDetailView
         self.navigationItem.titleView = titleView
         self.view = _routineDayDetailView
         
+        let quitButton = UIButton()
+        quitButton.setImage(UIImage(systemName: "chevron.left")?.withTintColor(Colors.linkColor, renderingMode: .alwaysOriginal), for: .normal)
+        quitButton.addTarget(self, action: #selector(self.didTapBackButton), for: .touchUpInside)
+        
+        let quitButtonItem = UIBarButtonItem(customView: quitButton)
+        self.navigationItem.setLeftBarButton(quitButtonItem, animated: true)
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        
         _routineDayDetailView.delegate = self
     }
     
@@ -77,5 +85,9 @@ class RoutineDoneDayDetailViewController: UIViewController, RoutineDayDetailView
         let daySessionVC = RoutineDaySessionViewController(exercises: self._exercises, routine: self._routine, day: self._day)
         self.navigationController?.pushViewController(daySessionVC, animated: true)
         daySessionVC.tabBarController?.delegate = daySessionVC
+    }
+    
+    @objc func didTapBackButton() {
+        self.navigationController?.popViewController(animated: true)
     }
 }

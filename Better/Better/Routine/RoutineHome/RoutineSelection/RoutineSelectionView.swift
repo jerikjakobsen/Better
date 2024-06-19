@@ -38,7 +38,7 @@ class RoutineSelectionView: UIView {
         
         _dropDownButton = UIButton()
         _dropDownButton.translatesAutoresizingMaskIntoConstraints = false
-        _dropDownButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+        _dropDownButton.setImage(UIImage(systemName: "chevron.down")?.withTintColor(Colors.linkColor, renderingMode: .alwaysOriginal), for: .normal)
         
         _contentView = UIView()
         _contentView.translatesAutoresizingMaskIntoConstraints = false

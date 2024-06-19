@@ -21,6 +21,14 @@ class RoutineSettingsViewController: UIViewController, RoutineSettingsViewDelega
         self.view = self._routineSettingsView
         self._routineSettingsView.backgroundColor = .white
         self._routineSettingsView.delegate = self
+        
+        let quitButton = UIButton()
+        quitButton.setImage(UIImage(systemName: "chevron.left")?.withTintColor(Colors.linkColor, renderingMode: .alwaysOriginal), for: .normal)
+        quitButton.addTarget(self, action: #selector(self.didTapBackButton), for: .touchUpInside)
+        
+        let quitButtonItem = UIBarButtonItem(customView: quitButton)
+        self.navigationItem.setLeftBarButton(quitButtonItem, animated: true)
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
     required init?(coder: NSCoder) {
@@ -47,4 +55,7 @@ class RoutineSettingsViewController: UIViewController, RoutineSettingsViewDelega
         print("change rest days")
     }
     
+    @objc func didTapBackButton() {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
