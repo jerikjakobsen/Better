@@ -1,5 +1,7 @@
 import format from "pg-format"
 import * as db from "../../../database/index.js"
+import {createInsertQuery, createUpdateQuery} from "../../../database/utilities.js"
+import {v4 as uuidv4} from 'uuid'
 
 const get_routine_info = (routine_id, user_id) => {
     const sqlQuery = format(`
@@ -84,12 +86,41 @@ const get_training_day_history = (routine_id, day_id) => {
     }
 }
 
+const create_routineDB = async (name, creator_user_id, break_days = 1) => {
 
+   let routine = {
+       name,
+       creator_user_id,
+       break_days,
+       id: uuidv4()
+   } 
+  
+   const sqlQuery = createInsertQuery("routine", routine)
+
+   try {
+       await db.query(sqlQuery)
+       return routine
+   } catch (err) {
+       throw err
+   }
+}
+
+const edit_routineDB = async (routine_id, edit_routine) => {
+    const sqlQuery = createUpdateQuery("routine", edit_routine, routine_id)
+
+    try {
+        await db.query(sqlQuery)
+    } catch (err) {
+        throw err
+    }
+}
 
 
 export {
     get_routine_info,
-    get_training_day_history 
+    get_training_day_history,
+    create_routineDB,
+    edit_routineDB
 }
 
 

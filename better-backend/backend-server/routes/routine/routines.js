@@ -1,4 +1,4 @@
-import {get_routine_info, get_training_day_history} from './queries/routines.js'
+import {get_routine_info, get_training_day_history, create_routineDB, edit_routineDB} from './queries/routines.js'
 import {inspect} from 'util'
 
 const home = async (req, res) => {
@@ -141,12 +141,56 @@ const day_details = async (req, res) => {
 
 }
 
+const createRoutine = async (req, res) => {
+    const {
+        name,
+        break_days,
+        creator_user_id 
+    } = req.body
 
+    if (!name || !creator_user_id) {
+        return res.status(400).json({"message": "Please include name and creator_user_id in the body."})
+    }
+    
+    try {
+        let routine = await create_routineDB(name, creator_user_id, break_days)
+        return res.status(201).json(routine)
+    } catch (err) {
+        return res.status(500).json({"message": "Something went wrong"})
+    }
+}
 
+const editRoutine = async (req, res) => {
+    const {
+        id,
+        name,
+        break_days
+    } = req.body
 
+    if (!id) {
+        return res.status(400).json({"message": "Please include routine id in the body."})
+    }
 
+    try {
+        let edit_routine = {}
+        
+        if (name) edit_routine.name = name
+        if (break_days) edit_routine.break_days = break_days
+    
+        if (Object.keys(edit_routine).length == 0) {
+            return res.status(400).json({"message": "Please include a field to update"})
+        }
+        await edit_routineDB(id, edit_routine)
+        return res.status(200).json({"message": "Success!"})
+    } catch (err) {
+        return res.status(500).json({"message": "Something went wrong"}) 
+    }
+
+}
 
 export {
     home,
-    day_details
+    day_details,
+    createRoutine,
+    editRoutine
 }

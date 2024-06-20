@@ -16,9 +16,7 @@ const createExerciseDB = async (name, creator_id = null, link = "", description 
      
     try {
         const insertExerciseQuery = createInsertQuery('exercise', exercise)
-        console.log(insertExerciseQuery)
         await db.query(insertExerciseQuery)
-        console.log(muscleGroups)
         for (const m_id of muscleGroups) {
             console.log(m_id) 
             const exercise_muscle = {
@@ -26,7 +24,6 @@ const createExerciseDB = async (name, creator_id = null, link = "", description 
                 muscle_group_id: m_id
             }
             const insertExerciseMuscleQuery = createInsertQuery('exercise_muscle_group', exercise_muscle)
-            console.log(insertExerciseMuscleQuery)
             await db.query(insertExerciseMuscleQuery)
         }
         exercise.muscle_groups = muscleGroups
@@ -54,7 +51,6 @@ const editExerciseDB = async (exercise_id, edit_exercise) => {
         }
     }
     delete edit_exercise.muscle_groups
-    console.log(edit_exercise) 
     if (Object.keys(edit_exercise).length > 0) {
         let updateQuery = createUpdateQuery("exercise", edit_exercise, exercise_id)
         console.log(updateQuery)

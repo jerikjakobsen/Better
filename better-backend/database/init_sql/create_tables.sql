@@ -20,7 +20,9 @@ CREATE TABLE IF NOT EXISTS users (
 CREATE TABLE IF NOT EXISTS weight (
     id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_UUID(),
     weight_number FLOAT NOT NULL,
-    created TIMESTAMPTZ NOT NULL DEFAULT current_timestamp
+    creator_user_id UUID NOT NULL,
+    created TIMESTAMPTZ NOT NULL DEFAULT current_timestamp,
+    FOREIGN KEY (creator_user_id) REFERENCES users(id)
     );
 
 CREATE TABLE IF NOT EXISTS routine (

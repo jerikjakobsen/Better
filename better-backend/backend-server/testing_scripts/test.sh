@@ -30,7 +30,7 @@
      "http://localhost:4000/exercise/create/"
 '
 
-curl -X POST \
+: 'curl -X POST \
      -H "Content-type: application/json" \
      -H "Accept: application/json" \
      -d '{
@@ -40,3 +40,26 @@ curl -X POST \
          "muscle_groups": []
          }' \
      "http://localhost:4000/exercise/edit/"
+'
+
+: 'curl -X POST \
+     -H "Content-type: application/json" \
+     -H "Accept: application/json" \
+     -d '{
+         "name": "Routine #2 Leg Destroyer",
+         "creator_user_id": "a8ce98b8-c0a9-4b5a-a605-377e159c320a"
+         }' \
+     "http://localhost:4000/routine/create"
+'
+
+curl -X POST \
+     -H "Content-type: application/json" \
+     -H "Accept: application/json" \
+     -d '{
+         "id": "7793faa0-9dd8-4b16-bdcb-fe7bfe681d64",
+         "name": "Routine #2 Super Leg Destroyer"
+         }' \
+     "http://localhost:4000/routine/edit"
+
+
+

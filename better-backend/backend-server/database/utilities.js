@@ -37,7 +37,6 @@ const createUpdateQuery = (table, updateValues, id) => {
     let keys, values;
     keys = []
     values = []
-    console.log(updateValues)
     for (const [key, value] of Object.entries(updateValues)) {
         keys.push(key)
         values.push(value)
