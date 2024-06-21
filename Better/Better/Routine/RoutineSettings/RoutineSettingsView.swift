@@ -24,6 +24,8 @@ class RoutineSettingsView: UIView {
     let createNewExerciseRow: RoutineSettingsRowView
     let mainRoutineRow: RoutineSettingsRowView
     let changeRestDaysRow: RoutineSettingsRowView
+    let scrollview: UIScrollView
+    let contentView: UIView
     
     var delegate: RoutineSettingsViewDelegate? = nil
     
@@ -47,9 +49,19 @@ class RoutineSettingsView: UIView {
         self._stackView = UIStackView(arrangedSubviews: [createNewRoutineRow, editRoutineRow, createNewExerciseRow, mainRoutineRow, changeRestDaysRow])
         self._stackView.axis = .vertical
         self._stackView.spacing = 30
-//        self._stackView.alignment = .fill
         self._stackView.distribution = .fillProportionally
         _stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.scrollview = UIScrollView()
+        self.scrollview.translatesAutoresizingMaskIntoConstraints = false
+        self.scrollview.alwaysBounceVertical = true
+        
+        self.contentView = UIView()
+        self.contentView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.scrollview.addSubview(self.contentView)
+        
+        self.contentView.addSubview(self._stackView)
         
         super.init(frame: CGRect())
         createNewRoutineButton.setButtonAction {
@@ -72,7 +84,7 @@ class RoutineSettingsView: UIView {
             self.delegate?.didTapChangeRestDaysRow()
         }
 
-        self.addSubview(self._stackView)
+        self.addSubview(self.scrollview)
         
         self.autolayoutSubviews()
     }
@@ -82,11 +94,24 @@ class RoutineSettingsView: UIView {
     }
     
     func autolayoutSubviews() {
+        
         let constraints = [
-            _stackView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
-            _stackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 30),
-            _stackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
-            _stackView.bottomAnchor.constraint(lessThanOrEqualTo: self.safeAreaLayoutGuide.bottomAnchor)
+            scrollview.leftAnchor.constraint(equalTo: self.leftAnchor),
+            scrollview.rightAnchor.constraint(equalTo: self.rightAnchor),
+            scrollview.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            scrollview.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            
+            contentView.leftAnchor.constraint(equalTo: self.scrollview.leftAnchor),
+            contentView.rightAnchor.constraint(equalTo: self.scrollview.rightAnchor),
+            contentView.bottomAnchor.constraint(equalTo: self.scrollview.bottomAnchor),
+            contentView.topAnchor.constraint(equalTo: self.scrollview.topAnchor),
+            contentView.heightAnchor.constraint(equalTo: self.scrollview.heightAnchor),
+            contentView.widthAnchor.constraint(equalTo: self.scrollview.widthAnchor),
+            
+            _stackView.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 20),
+            _stackView.topAnchor.constraint(equalTo: self.contentView.safeAreaLayoutGuide.topAnchor, constant: 30),
+            _stackView.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -20),
+            _stackView.bottomAnchor.constraint(lessThanOrEqualTo: self.contentView.safeAreaLayoutGuide.bottomAnchor)
         ]
         
         NSLayoutConstraint.activate(constraints)
