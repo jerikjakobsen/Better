@@ -251,7 +251,6 @@
 		521B29FB2BC85439007CCF11 /* Routine */ = {
 			isa = PBXGroup;
 			children = (
-				5218DB552C250070002D62CD /* CreateRoutine */,
 				52448AFB2C1D1AE900E345F5 /* RoutineSettings */,
 				52399E722C08E48B00B95F04 /* Session */,
 				527FD7B12BEC569D00C3203E /* RoutineExerciseSession */,
@@ -377,12 +376,21 @@
 		52448AFB2C1D1AE900E345F5 /* RoutineSettings */ = {
 			isa = PBXGroup;
 			children = (
+				52704A852C4C34240083F328 /* SettingsViewControllers */,
 				52448AFC2C1D1B0100E345F5 /* RoutineSettingsView.swift */,
 				52448AFE2C1D1B1D00E345F5 /* RoutineSettingsViewController.swift */,
 				52448B002C1D1C8D00E345F5 /* RoutineSettingsRowView.swift */,
 				52448B022C1D213400E345F5 /* RightChevronButton.swift */,
 			);
 			path = RoutineSettings;
+			sourceTree = "<group>";
+		};
+		52704A852C4C34240083F328 /* SettingsViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5218DB552C250070002D62CD /* CreateRoutine */,
+			);
+			path = SettingsViewControllers;
 			sourceTree = "<group>";
 		};
 		527FD7B12BEC569D00C3203E /* RoutineExerciseSession */ = {
