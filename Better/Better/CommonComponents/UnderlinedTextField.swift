@@ -8,9 +8,25 @@
 import Foundation
 import UIKit
 
+protocol UnderlinedTextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField)
+    func textFieldDidEndEditing(_ textField: UITextField)
+}
+
+extension UnderlinedTextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+    }
+}
+
 class UnderlinedTextField: UITextField, UITextFieldDelegate {
     
     let fieldTextFieldUnderlineLayer: CALayer
+    var underlinedDelegate: UnderlinedTextFieldDelegate? = nil
     
     override init(frame: CGRect) {
         self.fieldTextFieldUnderlineLayer = CALayer()
@@ -40,9 +56,16 @@ class UnderlinedTextField: UITextField, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.fieldTextFieldUnderlineLayer.backgroundColor = Colors.blackTextColor.cgColor
+        self.underlinedDelegate?.textFieldDidBeginEditing(self)
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.fieldTextFieldUnderlineLayer.backgroundColor = Colors.greyBackgroundColor.cgColor
+        self.underlinedDelegate?.textFieldDidEndEditing(self)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.resignFirstResponder()
+        return true
     }
     
 }

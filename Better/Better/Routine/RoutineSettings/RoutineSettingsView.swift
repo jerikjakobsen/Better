@@ -31,20 +31,11 @@ class RoutineSettingsView: UIView {
     
     init() {
         
-        let createNewRoutineButton = RightChevronButton()
-        createNewRoutineRow = RoutineSettingsRowView(text: "Create New Routine", rightView: createNewRoutineButton)
-        
-        let editRoutineButton = RightChevronButton()
-        editRoutineRow = RoutineSettingsRowView(text: "Edit Routine", rightView: editRoutineButton)
-        
-        let createNewExerciseButton = RightChevronButton()
-        createNewExerciseRow = RoutineSettingsRowView(text: "Create New Exercise", rightView: createNewExerciseButton)
-        
-        let mainRoutineButton = RightChevronButton()
-        mainRoutineRow = RoutineSettingsRowView(text: "Main Routine", rightView: mainRoutineButton)
-        
-        let changeRestDayButton = RightChevronButton()
-        changeRestDaysRow = RoutineSettingsRowView(text: "Change Rest Days", rightView: changeRestDayButton)
+        createNewRoutineRow = RoutineSettingsRowView(text: "Create New Routine", rightView: RightChevronButton())
+        editRoutineRow = RoutineSettingsRowView(text: "Edit Routine", rightView: RightChevronButton())
+        createNewExerciseRow = RoutineSettingsRowView(text: "Create New Exercise", rightView: RightChevronButton())
+        mainRoutineRow = RoutineSettingsRowView(text: "Main Routine", rightView: RightChevronButton())
+        changeRestDaysRow = RoutineSettingsRowView(text: "Change Rest Days", rightView: RightChevronButton())
         
         self._stackView = UIStackView(arrangedSubviews: [createNewRoutineRow, editRoutineRow, createNewExerciseRow, mainRoutineRow, changeRestDaysRow])
         self._stackView.axis = .vertical
@@ -64,28 +55,28 @@ class RoutineSettingsView: UIView {
         self.contentView.addSubview(self._stackView)
         
         super.init(frame: CGRect())
-        createNewRoutineButton.setButtonAction {
+                
+        createNewRoutineRow.action = {
             self.delegate?.didTapCreateNewRoutine()
         }
         
-        editRoutineButton.setButtonAction {
+        editRoutineRow.action = {
             self.delegate?.didTapEditRoutine()
         }
         
-        createNewExerciseButton.setButtonAction {
+        createNewExerciseRow.action = {
             self.delegate?.didTapCreateNewExercise()
         }
-        
-        mainRoutineButton.setButtonAction {
+        mainRoutineRow.action = {
             self.delegate?.didTapMainRoutineRow()
         }
         
-        changeRestDayButton.setButtonAction {
+        changeRestDaysRow.action = {
             self.delegate?.didTapChangeRestDaysRow()
         }
 
         self.addSubview(self.scrollview)
-        
+                
         self.autolayoutSubviews()
     }
     

@@ -22,13 +22,7 @@ class RoutineSettingsViewController: UIViewController, RoutineSettingsViewDelega
         self._routineSettingsView.backgroundColor = .white
         self._routineSettingsView.delegate = self
         
-        let quitButton = UIButton()
-        quitButton.setImage(UIImage(systemName: "chevron.left")?.withTintColor(Colors.linkColor, renderingMode: .alwaysOriginal), for: .normal)
-        quitButton.addTarget(self, action: #selector(self.didTapBackButton), for: .touchUpInside)
-        
-        let quitButtonItem = UIBarButtonItem(customView: quitButton)
-        self.navigationItem.setLeftBarButton(quitButtonItem, animated: true)
-        self.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationItem.setLeftChevronButton(viewController: self)
     }
     
     required init?(coder: NSCoder) {
@@ -36,7 +30,8 @@ class RoutineSettingsViewController: UIViewController, RoutineSettingsViewDelega
     }
     
     func didTapCreateNewRoutine() {
-        print("create new routine")
+        let vc = CreateRoutineViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func didTapEditRoutine() {

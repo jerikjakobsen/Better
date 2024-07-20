@@ -15,6 +15,9 @@
 		5200F38E2BE31DF600B3E66D /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 5200F38D2BE31DF600B3E66D /* fire.png */; };
 		5210A6702BE56BF7008768EE /* RoutineDaySessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210A66F2BE56BF7008768EE /* RoutineDaySessionView.swift */; };
 		5210A6722BE56C02008768EE /* RoutineDaySessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210A6712BE56C02008768EE /* RoutineDaySessionViewController.swift */; };
+		5218DB572C250100002D62CD /* CreateRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5218DB562C250100002D62CD /* CreateRoutineViewController.swift */; };
+		5218DB592C250114002D62CD /* CreateRoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5218DB582C250114002D62CD /* CreateRoutineView.swift */; };
+		5218DB5B2C25071E002D62CD /* DayTitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5218DB5A2C25071E002D62CD /* DayTitleHeaderView.swift */; };
 		521B29E82BC85358007CCF11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B29E72BC85358007CCF11 /* AppDelegate.swift */; };
 		521B29EA2BC85358007CCF11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B29E92BC85358007CCF11 /* SceneDelegate.swift */; };
 		521B29EC2BC85358007CCF11 /* RoutineHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B29EB2BC85358007CCF11 /* RoutineHomeViewController.swift */; };
@@ -26,6 +29,8 @@
 		521B2A2B2BC85D32007CCF11 /* RoutineHomeHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B2A2A2BC85D32007CCF11 /* RoutineHomeHeaderSectionView.swift */; };
 		521B2A2D2BC9B395007CCF11 /* RoutineHomeDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B2A2C2BC9B395007CCF11 /* RoutineHomeDayCell.swift */; };
 		521B2A332BC9B90B007CCF11 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B2A322BC9B90B007CCF11 /* Day.swift */; };
+		5224369E2C452FED002C0901 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224369D2C452FED002C0901 /* AddExerciseView.swift */; };
+		522436A02C452FFB002C0901 /* AddExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224369F2C452FFB002C0901 /* AddExerciseViewController.swift */; };
 		522B24582BC9CA3700A7DDE2 /* RoutineSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B24572BC9CA3700A7DDE2 /* RoutineSelectionView.swift */; };
 		522B245A2BC9CE1700A7DDE2 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B24592BC9CE1700A7DDE2 /* Routine.swift */; };
 		522B245C2BCB18F800A7DDE2 /* RoutinSelectionOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B245B2BCB18F800A7DDE2 /* RoutinSelectionOptionView.swift */; };
@@ -42,10 +47,14 @@
 		52399E772C08E49700B95F04 /* SessionInProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52399E742C08E49600B95F04 /* SessionInProgressView.swift */; };
 		52399E782C08E49700B95F04 /* SessionInProgressSetRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52399E752C08E49600B95F04 /* SessionInProgressSetRecordCell.swift */; };
 		52399E7A2C0A035300B95F04 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52399E792C0A035300B95F04 /* UnderlinedTextField.swift */; };
+		523E34312C3CE56800E2CF05 /* SingleActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E34302C3CE56800E2CF05 /* SingleActionCell.swift */; };
+		523E34332C3CEEB600E2CF05 /* DynamicHeightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E34322C3CEEB600E2CF05 /* DynamicHeightTableView.swift */; };
 		52448AFD2C1D1B0100E345F5 /* RoutineSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52448AFC2C1D1B0100E345F5 /* RoutineSettingsView.swift */; };
 		52448AFF2C1D1B1D00E345F5 /* RoutineSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52448AFE2C1D1B1D00E345F5 /* RoutineSettingsViewController.swift */; };
 		52448B012C1D1C8D00E345F5 /* RoutineSettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52448B002C1D1C8D00E345F5 /* RoutineSettingsRowView.swift */; };
 		52448B032C1D213400E345F5 /* RightChevronButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52448B022C1D213400E345F5 /* RightChevronButton.swift */; };
+		526EAC132C42F4E4009385A0 /* AddDayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EAC122C42F4E4009385A0 /* AddDayHeaderView.swift */; };
+		526EAC152C43294B009385A0 /* UIResponder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EAC142C43294B009385A0 /* UIResponder+Utils.swift */; };
 		527FD7AC2BE93A9400C3203E /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AB2BE93A9400C3203E /* TrainingSession.swift */; };
 		527FD7AE2BEA8F0400C3203E /* ExerciseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AD2BEA8F0400C3203E /* ExerciseSession.swift */; };
 		527FD7B02BEA900200C3203E /* SetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AF2BEA900200C3203E /* SetSession.swift */; };
@@ -57,6 +66,8 @@
 		528B06B72BFB20F80076997D /* ExerciseSessionPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528B06B62BFB20F80076997D /* ExerciseSessionPopUpView.swift */; };
 		528B06B92BFB21200076997D /* ExerciseSessionPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528B06B82BFB21200076997D /* ExerciseSessionPopUpViewController.swift */; };
 		528B06BB2BFB21AA0076997D /* ExerciseSessionPopUpRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528B06BA2BFB21AA0076997D /* ExerciseSessionPopUpRowView.swift */; };
+		528F74142C4B5D4C0090A68C /* LeftBackBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F74132C4B5D4C0090A68C /* LeftBackBarButtonItem.swift */; };
+		528F74162C4B60B40090A68C /* UINavigationItem+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F74152C4B60B40090A68C /* UINavigationItem+Utils.swift */; };
 		52B067A02C1641DA000E5615 /* SessionNotesPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0679F2C1641DA000E5615 /* SessionNotesPopUpView.swift */; };
 		52B067A22C1641E5000E5615 /* SessionNotesPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B067A12C1641E5000E5615 /* SessionNotesPopUpViewController.swift */; };
 		52B067A42C17E192000E5615 /* BetterAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B067A32C17E192000E5615 /* BetterAlertController.swift */; };
@@ -73,6 +84,7 @@
 		52E866A32BD07D9F00E2CB6C /* ExerciseStatRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E866A22BD07D9F00E2CB6C /* ExerciseStatRowView.swift */; };
 		52ECD66B2C126A3A004EBBA3 /* startButtonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52ECD66A2C126A3A004EBBA3 /* startButtonIcon.png */; };
 		52ECD66D2C126AE4004EBBA3 /* endButtonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52ECD66C2C126AE4004EBBA3 /* endButtonIcon.png */; };
+		52F3C1AF2C389F9F00009EC2 /* ExerciseCreationTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3C1AE2C389F9F00009EC2 /* ExerciseCreationTitleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +96,9 @@
 		5200F38D2BE31DF600B3E66D /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		5210A66F2BE56BF7008768EE /* RoutineDaySessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDaySessionView.swift; sourceTree = "<group>"; };
 		5210A6712BE56C02008768EE /* RoutineDaySessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDaySessionViewController.swift; sourceTree = "<group>"; };
+		5218DB562C250100002D62CD /* CreateRoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineViewController.swift; sourceTree = "<group>"; };
+		5218DB582C250114002D62CD /* CreateRoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineView.swift; sourceTree = "<group>"; };
+		5218DB5A2C25071E002D62CD /* DayTitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTitleHeaderView.swift; sourceTree = "<group>"; };
 		521B29E42BC85358007CCF11 /* Better.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Better.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		521B29E72BC85358007CCF11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		521B29E92BC85358007CCF11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +112,8 @@
 		521B2A2A2BC85D32007CCF11 /* RoutineHomeHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineHomeHeaderSectionView.swift; sourceTree = "<group>"; };
 		521B2A2C2BC9B395007CCF11 /* RoutineHomeDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineHomeDayCell.swift; sourceTree = "<group>"; };
 		521B2A322BC9B90B007CCF11 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		5224369D2C452FED002C0901 /* AddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
+		5224369F2C452FFB002C0901 /* AddExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseViewController.swift; sourceTree = "<group>"; };
 		522B24572BC9CA3700A7DDE2 /* RoutineSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineSelectionView.swift; sourceTree = "<group>"; };
 		522B24592BC9CE1700A7DDE2 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		522B245B2BCB18F800A7DDE2 /* RoutinSelectionOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinSelectionOptionView.swift; sourceTree = "<group>"; };
@@ -113,10 +130,14 @@
 		52399E742C08E49600B95F04 /* SessionInProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionInProgressView.swift; sourceTree = "<group>"; };
 		52399E752C08E49600B95F04 /* SessionInProgressSetRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionInProgressSetRecordCell.swift; sourceTree = "<group>"; };
 		52399E792C0A035300B95F04 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
+		523E34302C3CE56800E2CF05 /* SingleActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleActionCell.swift; sourceTree = "<group>"; };
+		523E34322C3CEEB600E2CF05 /* DynamicHeightTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightTableView.swift; sourceTree = "<group>"; };
 		52448AFC2C1D1B0100E345F5 /* RoutineSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineSettingsView.swift; sourceTree = "<group>"; };
 		52448AFE2C1D1B1D00E345F5 /* RoutineSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineSettingsViewController.swift; sourceTree = "<group>"; };
 		52448B002C1D1C8D00E345F5 /* RoutineSettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineSettingsRowView.swift; sourceTree = "<group>"; };
 		52448B022C1D213400E345F5 /* RightChevronButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightChevronButton.swift; sourceTree = "<group>"; };
+		526EAC122C42F4E4009385A0 /* AddDayHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDayHeaderView.swift; sourceTree = "<group>"; };
+		526EAC142C43294B009385A0 /* UIResponder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utils.swift"; sourceTree = "<group>"; };
 		527FD7AB2BE93A9400C3203E /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
 		527FD7AD2BEA8F0400C3203E /* ExerciseSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSession.swift; sourceTree = "<group>"; };
 		527FD7AF2BEA900200C3203E /* SetSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSession.swift; sourceTree = "<group>"; };
@@ -128,6 +149,8 @@
 		528B06B62BFB20F80076997D /* ExerciseSessionPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSessionPopUpView.swift; sourceTree = "<group>"; };
 		528B06B82BFB21200076997D /* ExerciseSessionPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSessionPopUpViewController.swift; sourceTree = "<group>"; };
 		528B06BA2BFB21AA0076997D /* ExerciseSessionPopUpRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSessionPopUpRowView.swift; sourceTree = "<group>"; };
+		528F74132C4B5D4C0090A68C /* LeftBackBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftBackBarButtonItem.swift; sourceTree = "<group>"; };
+		528F74152C4B60B40090A68C /* UINavigationItem+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Utils.swift"; sourceTree = "<group>"; };
 		52B0679F2C1641DA000E5615 /* SessionNotesPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionNotesPopUpView.swift; sourceTree = "<group>"; };
 		52B067A12C1641E5000E5615 /* SessionNotesPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionNotesPopUpViewController.swift; sourceTree = "<group>"; };
 		52B067A32C17E192000E5615 /* BetterAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterAlertController.swift; sourceTree = "<group>"; };
@@ -144,6 +167,7 @@
 		52E866A22BD07D9F00E2CB6C /* ExerciseStatRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStatRowView.swift; sourceTree = "<group>"; };
 		52ECD66A2C126A3A004EBBA3 /* startButtonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButtonIcon.png; sourceTree = "<group>"; };
 		52ECD66C2C126AE4004EBBA3 /* endButtonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = endButtonIcon.png; sourceTree = "<group>"; };
+		52F3C1AE2C389F9F00009EC2 /* ExerciseCreationTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCreationTitleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +197,20 @@
 				5210A6712BE56C02008768EE /* RoutineDaySessionViewController.swift */,
 			);
 			path = RoutineDaySession;
+			sourceTree = "<group>";
+		};
+		5218DB552C250070002D62CD /* CreateRoutine */ = {
+			isa = PBXGroup;
+			children = (
+				5224369C2C452FDA002C0901 /* AddExercise */,
+				5218DB562C250100002D62CD /* CreateRoutineViewController.swift */,
+				5218DB582C250114002D62CD /* CreateRoutineView.swift */,
+				5218DB5A2C25071E002D62CD /* DayTitleHeaderView.swift */,
+				52F3C1AE2C389F9F00009EC2 /* ExerciseCreationTitleCell.swift */,
+				523E34302C3CE56800E2CF05 /* SingleActionCell.swift */,
+				526EAC122C42F4E4009385A0 /* AddDayHeaderView.swift */,
+			);
+			path = CreateRoutine;
 			sourceTree = "<group>";
 		};
 		521B29DB2BC85358007CCF11 = {
@@ -213,6 +251,7 @@
 		521B29FB2BC85439007CCF11 /* Routine */ = {
 			isa = PBXGroup;
 			children = (
+				5218DB552C250070002D62CD /* CreateRoutine */,
 				52448AFB2C1D1AE900E345F5 /* RoutineSettings */,
 				52399E722C08E48B00B95F04 /* Session */,
 				527FD7B12BEC569D00C3203E /* RoutineExerciseSession */,
@@ -291,6 +330,15 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
+		5224369C2C452FDA002C0901 /* AddExercise */ = {
+			isa = PBXGroup;
+			children = (
+				5224369D2C452FED002C0901 /* AddExerciseView.swift */,
+				5224369F2C452FFB002C0901 /* AddExerciseViewController.swift */,
+			);
+			path = AddExercise;
+			sourceTree = "<group>";
+		};
 		522B245F2BCB1CF000A7DDE2 /* RoutineSelection */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +357,8 @@
 				5200F3802BDB3B7000B3E66D /* LeftAlignedFlowLayout.swift */,
 				5200F3892BE3110600B3E66D /* Date+Operations.swift */,
 				527FD7BD2BF1428B00C3203E /* Array+Operations.swift */,
+				526EAC142C43294B009385A0 /* UIResponder+Utils.swift */,
+				528F74152C4B60B40090A68C /* UINavigationItem+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -393,6 +443,8 @@
 				52392A582BD1FC2D0008294E /* PaddedLabel.swift */,
 				52399E792C0A035300B95F04 /* UnderlinedTextField.swift */,
 				52B067A52C17E232000E5615 /* BetterAlert */,
+				523E34322C3CEEB600E2CF05 /* DynamicHeightTableView.swift */,
+				528F74132C4B5D4C0090A68C /* LeftBackBarButtonItem.swift */,
 			);
 			path = CommonComponents;
 			sourceTree = "<group>";
@@ -495,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				522B245A2BC9CE1700A7DDE2 /* Routine.swift in Sources */,
+				528F74162C4B60B40090A68C /* UINavigationItem+Utils.swift in Sources */,
 				52B067A72C17E247000E5615 /* BetterAlertView.swift in Sources */,
 				5200F3862BE08ECC00B3E66D /* HomeView.swift in Sources */,
 				52B067A02C1641DA000E5615 /* SessionNotesPopUpView.swift in Sources */,
@@ -502,12 +555,15 @@
 				52E866982BCF014300E2CB6C /* Colors.swift in Sources */,
 				52E8668E2BCEF2B000E2CB6C /* RoutineDoneDayDetailViewController.swift in Sources */,
 				52448B012C1D1C8D00E345F5 /* RoutineSettingsRowView.swift in Sources */,
+				526EAC132C42F4E4009385A0 /* AddDayHeaderView.swift in Sources */,
 				521B29EC2BC85358007CCF11 /* RoutineHomeViewController.swift in Sources */,
 				521B2A292BC85953007CCF11 /* Fonts.swift in Sources */,
 				5200F3832BDF5ACE00B3E66D /* RoutineDetailExerciseHeaderView.swift in Sources */,
+				5224369E2C452FED002C0901 /* AddExerciseView.swift in Sources */,
 				52448AFD2C1D1B0100E345F5 /* RoutineSettingsView.swift in Sources */,
 				528B06BB2BFB21AA0076997D /* ExerciseSessionPopUpRowView.swift in Sources */,
 				5210A6722BE56C02008768EE /* RoutineDaySessionViewController.swift in Sources */,
+				5218DB592C250114002D62CD /* CreateRoutineView.swift in Sources */,
 				521B2A332BC9B90B007CCF11 /* Day.swift in Sources */,
 				527FD7B92BEC5CE000C3203E /* RoutineExerciseSessionCell.swift in Sources */,
 				52E866932BCEF50700E2CB6C /* MuscleGroupsView.swift in Sources */,
@@ -517,14 +573,19 @@
 				52E866902BCEF2F900E2CB6C /* RoutineDayDetailView.swift in Sources */,
 				52B067A42C17E192000E5615 /* BetterAlertController.swift in Sources */,
 				52E8669A2BCF0FE500E2CB6C /* Exercise.swift in Sources */,
+				5218DB572C250100002D62CD /* CreateRoutineViewController.swift in Sources */,
 				5200F38A2BE3110600B3E66D /* Date+Operations.swift in Sources */,
+				52F3C1AF2C389F9F00009EC2 /* ExerciseCreationTitleCell.swift in Sources */,
 				528B06B72BFB20F80076997D /* ExerciseSessionPopUpView.swift in Sources */,
 				52392A572BD1F8720008294E /* TimeInterval+Operations.swift in Sources */,
 				521B2A2B2BC85D32007CCF11 /* RoutineHomeHeaderSectionView.swift in Sources */,
+				523E34332C3CEEB600E2CF05 /* DynamicHeightTableView.swift in Sources */,
 				52399E772C08E49700B95F04 /* SessionInProgressView.swift in Sources */,
 				527FD7B02BEA900200C3203E /* SetSession.swift in Sources */,
 				52392A592BD1FC2D0008294E /* PaddedLabel.swift in Sources */,
 				52B067A22C1641E5000E5615 /* SessionNotesPopUpViewController.swift in Sources */,
+				522436A02C452FFB002C0901 /* AddExerciseViewController.swift in Sources */,
+				526EAC152C43294B009385A0 /* UIResponder+Utils.swift in Sources */,
 				521B29FF2BC85506007CCF11 /* RoutineHomeView.swift in Sources */,
 				52448AFF2C1D1B1D00E345F5 /* RoutineSettingsViewController.swift in Sources */,
 				522B24582BC9CA3700A7DDE2 /* RoutineSelectionView.swift in Sources */,
@@ -539,14 +600,17 @@
 				522B245E2BCB19C600A7DDE2 /* RoutineSelectionOptionViewController.swift in Sources */,
 				527FD7AE2BEA8F0400C3203E /* ExerciseSession.swift in Sources */,
 				5200F3812BDB3B7000B3E66D /* LeftAlignedFlowLayout.swift in Sources */,
+				528F74142C4B5D4C0090A68C /* LeftBackBarButtonItem.swift in Sources */,
 				52E866962BCF005100E2CB6C /* MuscleGroupsViewCell.swift in Sources */,
 				52E866A02BD07B4C00E2CB6C /* RoutineDayDetailsExerciseCell.swift in Sources */,
 				521B29EA2BC85358007CCF11 /* SceneDelegate.swift in Sources */,
 				52399E7A2C0A035300B95F04 /* UnderlinedTextField.swift in Sources */,
 				5210A6702BE56BF7008768EE /* RoutineDaySessionView.swift in Sources */,
 				527FD7B72BEC5A6400C3203E /* ExerciseRecord.swift in Sources */,
+				5218DB5B2C25071E002D62CD /* DayTitleHeaderView.swift in Sources */,
 				527FD7B32BEC56D200C3203E /* RoutineExerciseSessionView.swift in Sources */,
 				52E8669C2BCF104100E2CB6C /* MuscleGroup.swift in Sources */,
+				523E34312C3CE56800E2CF05 /* SingleActionCell.swift in Sources */,
 				521B2A2D2BC9B395007CCF11 /* RoutineHomeDayCell.swift in Sources */,
 				52399E762C08E49700B95F04 /* SessionInProgressViewController.swift in Sources */,
 			);

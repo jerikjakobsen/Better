@@ -8,11 +8,14 @@
 import Foundation
 import UIKit
 
+typealias RoutineSettingsRowViewAction = () -> Void
+
 class RoutineSettingsRowView: UIView {
     
     let leftLabel: UILabel
     var rightView: UIView
     let stackView: UIStackView
+    public var action: RoutineSettingsRowViewAction? = nil
     
     init(text: String, rightView: UIView) {
         
@@ -34,6 +37,8 @@ class RoutineSettingsRowView: UIView {
         self.addSubview(stackView)
         
         self.autolayoutSubviews()
+        
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.didTap)))
     }
     
     required init?(coder: NSCoder) {
@@ -49,5 +54,9 @@ class RoutineSettingsRowView: UIView {
         ]
         
         NSLayoutConstraint.activate(constraints)
+    }
+    
+    @objc func didTap() {
+        self.action?()
     }
 }
