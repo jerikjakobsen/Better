@@ -51,12 +51,7 @@ class CreateRoutineViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         self.navigationItem.setLeftChevronButton(viewController: self)
-        
-        let titleView = UILabel()
-        titleView.font = Fonts.Montserrat_Small_Medium.bold()
-        titleView.textColor = Colors.blackTextColor
-        titleView.text = "Create New Routine"
-        self.navigationItem.titleView = titleView
+        self.navigationItem.setTitle(title: "New Routine")
     }
     
     required init?(coder: NSCoder) {

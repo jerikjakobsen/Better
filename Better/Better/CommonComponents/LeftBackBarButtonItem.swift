@@ -10,11 +10,20 @@ import UIKit
 
 class LeftBackBarButtonItem: UIBarButtonItem {
     let quitButton: UIButton
-    var viewController: UIViewController
+    var viewController: UIViewController? = nil
+    var navigationController: UINavigationController? = nil
     
-    init(viewController: UIViewController) {
+    convenience init(navigationController: UINavigationController) {
+        self.init()
+        self.navigationController = navigationController
+    }
+    
+    convenience init(viewController: UIViewController) {
+        self.init()
         self.viewController = viewController
-        
+    }
+    
+    override init() {
         self.quitButton = UIButton()
         self.quitButton.setImage(UIImage(systemName: "chevron.left")?.withTintColor(Colors.linkColor, renderingMode: .alwaysOriginal), for: .normal)
         var configuration = UIButton.Configuration.plain()
@@ -33,6 +42,10 @@ class LeftBackBarButtonItem: UIBarButtonItem {
     }
     
     @objc func backButtonAction() {
-        self.viewController.navigationController?.popViewController(animated: true)
+        if let navController = self.navigationController {
+            navController.popViewController(animated: true)
+        } else {
+            self.viewController?.navigationController?.popViewController(animated: true)
+        }
     }
 }

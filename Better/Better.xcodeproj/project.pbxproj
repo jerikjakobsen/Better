@@ -55,6 +55,10 @@
 		52448B032C1D213400E345F5 /* RightChevronButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52448B022C1D213400E345F5 /* RightChevronButton.swift */; };
 		526EAC132C42F4E4009385A0 /* AddDayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EAC122C42F4E4009385A0 /* AddDayHeaderView.swift */; };
 		526EAC152C43294B009385A0 /* UIResponder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EAC142C43294B009385A0 /* UIResponder+Utils.swift */; };
+		52704A882C4C34C50083F328 /* CreateExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52704A872C4C34C50083F328 /* CreateExerciseView.swift */; };
+		52704A8A2C4C34CE0083F328 /* CreateExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52704A892C4C34CE0083F328 /* CreateExerciseViewController.swift */; };
+		52704A8D2C4C3D480083F328 /* AddMuscleGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52704A8C2C4C3D480083F328 /* AddMuscleGroupView.swift */; };
+		52704A8F2C4C3D660083F328 /* AddMuscleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52704A8E2C4C3D660083F328 /* AddMuscleGroupViewController.swift */; };
 		527FD7AC2BE93A9400C3203E /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AB2BE93A9400C3203E /* TrainingSession.swift */; };
 		527FD7AE2BEA8F0400C3203E /* ExerciseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AD2BEA8F0400C3203E /* ExerciseSession.swift */; };
 		527FD7B02BEA900200C3203E /* SetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FD7AF2BEA900200C3203E /* SetSession.swift */; };
@@ -138,6 +142,10 @@
 		52448B022C1D213400E345F5 /* RightChevronButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightChevronButton.swift; sourceTree = "<group>"; };
 		526EAC122C42F4E4009385A0 /* AddDayHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDayHeaderView.swift; sourceTree = "<group>"; };
 		526EAC142C43294B009385A0 /* UIResponder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utils.swift"; sourceTree = "<group>"; };
+		52704A872C4C34C50083F328 /* CreateExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExerciseView.swift; sourceTree = "<group>"; };
+		52704A892C4C34CE0083F328 /* CreateExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExerciseViewController.swift; sourceTree = "<group>"; };
+		52704A8C2C4C3D480083F328 /* AddMuscleGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMuscleGroupView.swift; sourceTree = "<group>"; };
+		52704A8E2C4C3D660083F328 /* AddMuscleGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMuscleGroupViewController.swift; sourceTree = "<group>"; };
 		527FD7AB2BE93A9400C3203E /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
 		527FD7AD2BEA8F0400C3203E /* ExerciseSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSession.swift; sourceTree = "<group>"; };
 		527FD7AF2BEA900200C3203E /* SetSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSession.swift; sourceTree = "<group>"; };
@@ -388,9 +396,29 @@
 		52704A852C4C34240083F328 /* SettingsViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				52704A862C4C34990083F328 /* CreateExercise */,
 				5218DB552C250070002D62CD /* CreateRoutine */,
 			);
 			path = SettingsViewControllers;
+			sourceTree = "<group>";
+		};
+		52704A862C4C34990083F328 /* CreateExercise */ = {
+			isa = PBXGroup;
+			children = (
+				52704A8B2C4C3D350083F328 /* AddMuscleGroup */,
+				52704A872C4C34C50083F328 /* CreateExerciseView.swift */,
+				52704A892C4C34CE0083F328 /* CreateExerciseViewController.swift */,
+			);
+			path = CreateExercise;
+			sourceTree = "<group>";
+		};
+		52704A8B2C4C3D350083F328 /* AddMuscleGroup */ = {
+			isa = PBXGroup;
+			children = (
+				52704A8C2C4C3D480083F328 /* AddMuscleGroupView.swift */,
+				52704A8E2C4C3D660083F328 /* AddMuscleGroupViewController.swift */,
+			);
+			path = AddMuscleGroup;
 			sourceTree = "<group>";
 		};
 		527FD7B12BEC569D00C3203E /* RoutineExerciseSession */ = {
@@ -556,6 +584,7 @@
 			files = (
 				522B245A2BC9CE1700A7DDE2 /* Routine.swift in Sources */,
 				528F74162C4B60B40090A68C /* UINavigationItem+Utils.swift in Sources */,
+				52704A882C4C34C50083F328 /* CreateExerciseView.swift in Sources */,
 				52B067A72C17E247000E5615 /* BetterAlertView.swift in Sources */,
 				5200F3862BE08ECC00B3E66D /* HomeView.swift in Sources */,
 				52B067A02C1641DA000E5615 /* SessionNotesPopUpView.swift in Sources */,
@@ -590,6 +619,7 @@
 				523E34332C3CEEB600E2CF05 /* DynamicHeightTableView.swift in Sources */,
 				52399E772C08E49700B95F04 /* SessionInProgressView.swift in Sources */,
 				527FD7B02BEA900200C3203E /* SetSession.swift in Sources */,
+				52704A8D2C4C3D480083F328 /* AddMuscleGroupView.swift in Sources */,
 				52392A592BD1FC2D0008294E /* PaddedLabel.swift in Sources */,
 				52B067A22C1641E5000E5615 /* SessionNotesPopUpViewController.swift in Sources */,
 				522436A02C452FFB002C0901 /* AddExerciseViewController.swift in Sources */,
@@ -605,6 +635,8 @@
 				52E866A32BD07D9F00E2CB6C /* ExerciseStatRowView.swift in Sources */,
 				527FD7B52BEC57BE00C3203E /* RoutineExerciseSessionViewController.swift in Sources */,
 				522B245C2BCB18F800A7DDE2 /* RoutinSelectionOptionView.swift in Sources */,
+				52704A8F2C4C3D660083F328 /* AddMuscleGroupViewController.swift in Sources */,
+				52704A8A2C4C34CE0083F328 /* CreateExerciseViewController.swift in Sources */,
 				522B245E2BCB19C600A7DDE2 /* RoutineSelectionOptionViewController.swift in Sources */,
 				527FD7AE2BEA8F0400C3203E /* ExerciseSession.swift in Sources */,
 				5200F3812BDB3B7000B3E66D /* LeftAlignedFlowLayout.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 class MuscleGroupsView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    let _muscleGroups: [MuscleGroup]
+    var _muscleGroups: [MuscleGroup]
     
     override var intrinsicContentSize: CGSize {
         return contentSize
@@ -49,5 +49,13 @@ class MuscleGroupsView: UICollectionView, UICollectionViewDelegate, UICollection
         }
     }
     
-
+    public func addMuscleGroup(muscleGroup: MuscleGroup) {
+        self._muscleGroups.append(muscleGroup)
+        self.reloadData()
+    }
+    
+    public func removeMuscleGroup(indexPath: IndexPath) {
+        self._muscleGroups.remove(at: indexPath.row)
+        self.reloadData()
+    }
 }

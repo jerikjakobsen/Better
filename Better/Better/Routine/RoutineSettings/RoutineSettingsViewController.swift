@@ -39,7 +39,8 @@ class RoutineSettingsViewController: UIViewController, RoutineSettingsViewDelega
     }
     
     func didTapCreateNewExercise() {
-        print("create new exercise")
+        let vc = CreateExerciseViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func didTapMainRoutineRow() {
