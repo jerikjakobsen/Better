@@ -1,18 +1,6 @@
-DROP TABLE IF EXISTS set_session;
-DROP TABLE IF EXISTS note;
-DROP TABLE IF EXISTS exercise_session;
-DROP TABLE IF EXISTS training_session;
-DROP TABLE IF EXISTS exercise_muscle_group;
-DROP TABLE IF EXISTS muscle_group;
-DROP TABLE IF EXISTS routine_exercise;
-DROP TABLE IF EXISTS exercise;
-DROP TABLE IF EXISTS day;
-DROP TABLE IF EXISTS routine;
-DROP TABLE IF EXISTS users;
-
 CREATE TABLE IF NOT EXISTS users (
     id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
-    email VARCHAR(256) NOT NULL,
+    email VARCHAR(256) NOT NULL UNIQUE,
     hash_pass VARCHAR(256) NOT NULL,
     salt VARCHAR(256) NOT NULL
     );
@@ -122,6 +110,10 @@ CREATE TABLE IF NOT EXISTS note (
     exercise_session_id UUID NOT NULL,
     FOREIGN KEY (exercise_session_id) REFERENCES exercise_session(id)
     );
+
+GRANT INSERT, UPDATE, SELECT, DELETE 
+ON ALL TABLES IN SCHEMA public
+TO better;
 
 
 GRANT INSERT, UPDATE, SELECT, DELETE 

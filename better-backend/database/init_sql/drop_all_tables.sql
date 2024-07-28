@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS set_session;
+DROP TABLE IF EXISTS note;
+DROP TABLE IF EXISTS exercise_session;
+DROP TABLE IF EXISTS training_session;
+DROP TABLE IF EXISTS exercise_muscle_group;
+DROP TABLE IF EXISTS muscle_group;
+DROP TABLE IF EXISTS routine_exercise;
+DROP TABLE IF EXISTS exercise;
+DROP TABLE IF EXISTS day;
+DROP TABLE IF EXISTS routine;
+DROP TABLE IF EXISTS users;
