@@ -1,8 +1,12 @@
+import dotenv from 'dotenv'
+dotenv.config({
+    path: ["../../.env.server", "../../.env.redis", "../../.env.postgres"]
+})
 import Redis from 'ioredis'
 import session from 'express-session';
 import RedisStore from "connect-redis"
 
-
+console.log("Configuring Redis store...")
 const redisClient = new Redis({
     port: Number(process.env.REDIS_PORT),
     host: process.env.REDIS_HOST,
