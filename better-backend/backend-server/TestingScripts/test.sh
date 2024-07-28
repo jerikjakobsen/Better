@@ -27,7 +27,7 @@
          "description": "Step forward with dumbells",
          "muscle_groups": ["78d6b0b9-5247-4006-b6d1-7faf6475bbea", "d0fdc293-75fe-4894-8f32-ab1906e9e89c"]
          }' \
-     "http://localhost:4000/exercise/create/"
+     "http://localhost:27901/exercise/create/"
 '
 
 : 'curl -X POST \
@@ -52,7 +52,7 @@
      "http://localhost:4000/routine/create"
 '
 
-curl -X POST \
+: 'curl -X POST \
      -H "Content-type: application/json" \
      -H "Accept: application/json" \
      -d '{
@@ -60,6 +60,6 @@ curl -X POST \
          "name": "Routine #2 Super Leg Destroyer"
          }' \
      "http://localhost:4000/routine/edit"
-
+'
 
 

@@ -1,5 +1,9 @@
 import express from 'express'
+import AuthenticateRequest from '../../AuthenticationManagement/AuthenticateRequestMiddleware.js'
+
 const router = express.Router()
+
+router.use(AuthenticateRequest)
 
 import {home, day_details, createRoutine, editRoutine} from './routines.js'
 

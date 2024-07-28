@@ -1,5 +1,5 @@
 import format from "pg-format"
-import * as db from "../../../database/index.js"
+import * as db from "../../../Database/index.js"
 
 const get_home_info = (user_id) => {
     const sqlQuery = format(`

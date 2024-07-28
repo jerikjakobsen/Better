@@ -1,6 +1,6 @@
 import format from "pg-format"
-import * as db from "../../../database/index.js"
-import {createInsertQuery, createUpdateQuery} from "../../../database/utilities.js"
+import * as db from "../../../Database/index.js"
+import {createInsertQuery, createUpdateQuery} from "../../../Database/utilities.js"
 import {v4 as uuidv4} from 'uuid'
 
 const get_routine_info = (routine_id, user_id) => {

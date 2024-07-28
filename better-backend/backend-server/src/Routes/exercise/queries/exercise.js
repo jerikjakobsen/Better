@@ -1,6 +1,6 @@
-import {createInsertQuery, createUpdateQuery} from "../../../database/utilities.js"
+import {createInsertQuery, createUpdateQuery} from "../../../Database/utilities.js"
 import format from "pg-format"
-import * as db from "../../../database/index.js"
+import * as db from "../../../Database/index.js"
 import {v4 as uuidv4} from 'uuid'
 
 const createExerciseDB = async (name, creator_id = null, link = "", description = "", muscleGroups = [], default_break_time = 0, is_official = false) => {

@@ -1,7 +1,7 @@
 import 'dotenv/config'
-import app from "./app.js"
+import app from "./src/app.js"
 
-app.listen(4000, () => {
-    console.log("Listening at 4000")
+app.listen(process.env.NODE_SERVER_PORT, () => {
+    console.log(`Listening at ${process.env.NODE_SERVER_PORT}`)
 })
 
