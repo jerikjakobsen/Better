@@ -1,10 +1,17 @@
 FROM node:alpine
 
-WORKDIR /app
+WORKDIR /Better
 
-RUN npm install -g nodemon ts-node
+COPY ./.env.postgres ./.env.postgres
+COPY ./.env.redis ./.env.redis
+COPY ./.env.server ./.env.server
 
-COPY ./ ./
+WORKDIR /Better/better-backend/backend-server
+
+COPY ./better-backend/backend-server/src ./src
+COPY ./better-backend/backend-server/index.js ./index.js
+COPY ./better-backend/backend-server/package-lock.json ./package-lock.json
+COPY ./better-backend/backend-server/package.json ./package.json
 
 RUN npm install
 
