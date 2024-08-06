@@ -4,7 +4,7 @@ import {createInsertQuery} from "../../../Database/utilities.js"
 import {v4 as uuidv4} from 'uuid'
 import {randomBytes} from 'crypto'
 
-const createAccountDB = async (email, hash_pass, id, salt) => {
+const createAccountDB = async (email, hash_pass, id, salt, name) => {
 
     try {
 
@@ -12,7 +12,8 @@ const createAccountDB = async (email, hash_pass, id, salt) => {
             id,
             email,
             hash_pass,
-            salt
+            salt,
+            name
         }
 
         const insertUserQuery = createInsertQuery('users', user)

@@ -2,7 +2,8 @@ CREATE TABLE IF NOT EXISTS users (
     id UUID PRIMARY KEY NOT NULL DEFAULT gen_random_uuid(),
     email VARCHAR(256) NOT NULL UNIQUE,
     hash_pass VARCHAR(256) NOT NULL,
-    salt VARCHAR(256) NOT NULL
+    salt VARCHAR(256) NOT NULL,
+    name VARCHAR(64) NOT NULL
     );
 
 CREATE TABLE IF NOT EXISTS weight (
